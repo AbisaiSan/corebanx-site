@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+html,body{margin:0;padding:0;background:#12274d}
+*{box-sizing:border-box}
+a{color:#F0743A}
+a:hover{color:#d9612c}
+</style>
+</helmet>
+<x-import component-from-global-scope="deck-stage" from="./deck-stage.js" width="1920" height="1080" hint-size="100%,100%">
+
+<section data-label="Capa" data-screen-label="01" data-speaker-notes="Abertura: apresentação do novo site institucional da Corebanx. Mockup de alta fidelidade e protótipo navegável." style="width:100%;height:100%;background:#fff;padding:110px 120px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;position:relative">
+<div style="position:absolute;width:900px;height:900px;border-radius:50%;background:radial-gradient(circle at 40% 40%,rgba(240,116,58,.22),rgba(240,116,58,0) 68%);top:-260px;right:-200px"></div>
+<div style="display:flex;align-items:center;gap:16px;position:relative">
+<span style="width:44px;height:44px;border-radius:15px;background:#F0743A;display:block"></span>
+<span style="font:600 34px/1 Figtree,sans-serif;letter-spacing:-.02em;color:#1D3F7A">corebanx</span>
+</div>
+<div style="position:relative">
+<p style="margin:0 0 28px;font:500 26px/1 'DM Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:#F0743A">Novo site institucional</p>
+<h1 style="margin:0;max-width:1360px;font:600 110px/1.02 Figtree,sans-serif;letter-spacing:-.035em;color:#1D3F7A;text-wrap:pretty">Infraestrutura financeira completa para quem constrói o banco do futuro</h1>
+<p style="margin:38px 0 0;max-width:900px;font:400 32px/1.5 'DM Sans',sans-serif;color:rgba(29,63,122,.72)">Mockup de alta fidelidade, mini design system e protótipo navegável de seis telas.</p>
+</div>
+<div style="display:flex;gap:60px;position:relative">
+<span style="font:500 24px/1 'DM Mono',monospace;color:rgba(29,63,122,.5)">Home</span>
+<span style="font:500 24px/1 'DM Mono',monospace;color:rgba(29,63,122,.5)">Produtos</span>
+<span style="font:500 24px/1 'DM Mono',monospace;color:rgba(29,63,122,.5)">Para Bancos</span>
+<span style="font:500 24px/1 'DM Mono',monospace;color:rgba(29,63,122,.5)">Quem Somos</span>
+<span style="font:500 24px/1 'DM Mono',monospace;color:rgba(29,63,122,.5)">Cases</span>
+<span style="font:500 24px/1 'DM Mono',monospace;color:rgba(29,63,122,.5)">Contato</span>
+</div>
+</section>
+
+<section data-label="Premissas" data-screen-label="02" data-speaker-notes="Público B2B: diretores de tecnologia, produto e operações. Tom institucional, nada de linguagem de app de varejo." style="width:100%;height:100%;background:#fff;padding:110px 120px;display:flex;flex-direction:column;justify-content:center;gap:64px">
+<div>
+<p style="margin:0 0 22px;font:500 24px/1 'DM Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:#F0743A">Premissas do projeto</p>
+<h2 style="margin:0;max-width:1300px;font:600 76px/1.08 Figtree,sans-serif;letter-spacing:-.03em;color:#1D3F7A;text-wrap:pretty">Um site institucional para decisores dentro de instituições financeiras</h2>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px">
+<div style="background:#ECECEA;border-radius:28px;padding:44px">
+<p style="margin:0 0 16px;font:600 34px/1.2 Figtree,sans-serif;color:#1D3F7A">Público</p>
+<p style="margin:0;font:400 27px/1.5 'DM Sans',sans-serif;color:rgba(29,63,122,.72)">Diretores de tecnologia, produto e operações em bancos, fintechs, subadquirentes e varejo.</p>
+</div>
+<div style="background:#ECECEA;border-radius:28px;padding:44px">
+<p style="margin:0 0 16px;font:600 34px/1.2 Figtree,sans-serif;color:#1D3F7A">Tom</p>
+<p style="margin:0;font:400 27px/1.5 'DM Sans',sans-serif;color:rgba(29,63,122,.72)">Direto, técnico mas acessível. Solidez e inovação, sem linguagem de app de varejo.</p>
+</div>
+<div style="background:#12274d;border-radius:28px;padding:44px">
+<p style="margin:0 0 16px;font:600 34px/1.2 Figtree,sans-serif;color:#fff">Entregáveis</p>
+<p style="margin:0;font:400 27px/1.5 'DM Sans',sans-serif;color:rgba(236,236,234,.72)">Mockup de alta fidelidade, mini design system e protótipo navegável em desktop e mobile.</p>
+</div>
+</div>
+</section>
+
+<section data-label="Paleta" data-screen-label="03" data-speaker-notes="Paleta oficial do manual. Laranja é sempre a cor de ação; azul marinho nunca compete em protagonismo." style="width:100%;height:100%;background:#fff;padding:110px 120px;display:flex;flex-direction:column;gap:56px">
+<div>
+<p style="margin:0 0 22px;font:500 24px/1 'DM Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:#F0743A">Design system · 01</p>
+<h2 style="margin:0;font:600 76px/1.08 Figtree,sans-serif;letter-spacing:-.03em;color:#1D3F7A">Paleta e o papel de cada cor</h2>
+</div>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:28px;flex:1">
+<div style="border:1px solid rgba(29,63,122,.12);border-radius:28px;overflow:hidden;display:flex;flex-direction:column">
+<div style="flex:1;background:#F0743A"></div>
+<div style="padding:32px">
+<p style="margin:0;font:600 32px/1.2 Figtree,sans-serif;color:#1D3F7A">Laranja Corebanx</p>
+<p style="margin:10px 0 14px;font:500 26px/1 'DM Mono',monospace;color:#F0743A">#F0743A</p>
+<p style="margin:0;font:400 25px/1.45 'DM Sans',sans-serif;color:rgba(29,63,122,.65)">Ação principal: CTAs, links e títulos de seção.</p>
+</div>
+</div>
+<div style="border:1px solid rgba(29,63,122,.12);border-radius:28px;overflow:hidden;display:flex;flex-direction:column">
+<div style="flex:1;background:#1D3F7A"></div>
+<div style="padding:32px">
+<p style="margin:0;font:600 32px/1.2 Figtree,sans-serif;color:#1D3F7A">Azul marinho</p>
+<p style="margin:10px 0 14px;font:500 26px/1 'DM Mono',monospace;color:#F0743A">#1D3F7A</p>
+<p style="margin:0;font:400 25px/1.45 'DM Sans',sans-serif;color:rgba(29,63,122,.65)">Texto institucional e fundos de contraste.</p>
+</div>
+</div>
+<div style="border:1px solid rgba(29,63,122,.12);border-radius:28px;overflow:hidden;display:flex;flex-direction:column">
+<div style="flex:1;background:#ECECEA"></div>
+<div style="padding:32px">
+<p style="margin:0;font:600 32px/1.2 Figtree,sans-serif;color:#1D3F7A">Cinza neutro</p>
+<p style="margin:10px 0 14px;font:500 26px/1 'DM Mono',monospace;color:#F0743A">#ECECEA</p>
+<p style="margin:0;font:400 25px/1.45 'DM Sans',sans-serif;color:rgba(29,63,122,.65)">Fundos de seção, rodapé e marca reduzida.</p>
+</div>
+</div>
+<div style="border:1px solid rgba(29,63,122,.12);border-radius:28px;overflow:hidden;display:flex;flex-direction:column">
+<div style="flex:1;background:#fff;border-bottom:1px solid rgba(29,63,122,.1)"></div>
+<div style="padding:32px">
+<p style="margin:0;font:600 32px/1.2 Figtree,sans-serif;color:#1D3F7A">Branco</p>
+<p style="margin:10px 0 14px;font:500 26px/1 'DM Mono',monospace;color:#F0743A">#FFFFFF</p>
+<p style="margin:0;font:400 25px/1.45 'DM Sans',sans-serif;color:rgba(29,63,122,.65)">Fundo institucional predominante.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section data-label="Tipografia e componentes" data-screen-label="04" data-speaker-notes="Figtree para títulos, geométrica com curvas suaves, dialogando com o logo. DM Sans no corpo. DM Mono em rótulos técnicos." style="width:100%;height:100%;background:#ECECEA;padding:110px 120px;display:flex;flex-direction:column;gap:52px">
+<div>
+<p style="margin:0 0 22px;font:500 24px/1 'DM Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:#F0743A">Design system · 02</p>
+<h2 style="margin:0;font:600 76px/1.08 Figtree,sans-serif;letter-spacing:-.03em;color:#1D3F7A">Tipografia e componentes</h2>
+</div>
+<div style="display:grid;grid-template-columns:1.1fr 1fr;gap:32px;flex:1">
+<div style="background:#fff;border-radius:28px;padding:48px;display:flex;flex-direction:column;justify-content:center;gap:22px">
+<p style="margin:0;font:500 24px/1 'DM Mono',monospace;color:rgba(29,63,122,.55)">Figtree SemiBold · títulos</p>
+<p style="margin:0;font:600 96px/1 Figtree,sans-serif;letter-spacing:-.035em;color:#1D3F7A">Aa Bb Cc</p>
+<div style="height:1px;background:rgba(29,63,122,.12)"></div>
+<p style="margin:0;font:500 24px/1 'DM Mono',monospace;color:rgba(29,63,122,.55)">DM Sans Regular · corpo</p>
+<p style="margin:0;font:400 30px/1.5 'DM Sans',sans-serif;color:rgba(29,63,122,.75)">Parágrafos, listas e legendas. Alta legibilidade em telas densas de informação.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:24px">
+<div style="background:#fff;border-radius:28px;padding:40px;display:flex;flex-wrap:wrap;gap:20px;align-items:center">
+<span style="background:#F0743A;color:#fff;font:600 27px/1 'DM Sans',sans-serif;padding:26px 34px;border-radius:18px">Fale com um especialista</span>
+<span style="background:#fff;color:#1D3F7A;border:1px solid rgba(29,63,122,.25);font:600 27px/1 'DM Sans',sans-serif;padding:26px 34px;border-radius:18px">Conheça as soluções</span>
+<span style="color:#F0743A;font:600 27px/1 'DM Sans',sans-serif;padding:8px 0">Saiba mais →</span>
+</div>
+<div style="background:#fff;border-radius:28px;padding:40px;flex:1;display:flex;flex-direction:column;gap:18px">
+<div style="display:flex;gap:16px;align-items:center"><span style="flex:none;width:34px;height:34px;border-radius:50%;background:#F0743A;color:#fff;font:700 19px/34px 'DM Sans',sans-serif;text-align:center">✓</span><span style="font:400 27px/1.4 'DM Sans',sans-serif;color:#1D3F7A">Checklist de benefícios</span></div>
+<div style="display:flex;gap:16px;align-items:center"><span style="flex:none;width:34px;height:34px;border-radius:50%;background:#F0743A;color:#fff;font:700 19px/34px 'DM Sans',sans-serif;text-align:center">✓</span><span style="font:400 27px/1.4 'DM Sans',sans-serif;color:#1D3F7A">Cards com cantos suavemente arredondados</span></div>
+<div style="display:flex;gap:16px;align-items:center"><span style="flex:none;width:34px;height:34px;border-radius:50%;background:#F0743A;color:#fff;font:700 19px/34px 'DM Sans',sans-serif;text-align:center">✓</span><span style="font:400 27px/1.4 'DM Sans',sans-serif;color:#1D3F7A">Ícones de linha simples, sem fotos genéricas</span></div>
+<div style="display:flex;gap:16px;align-items:center"><span style="flex:none;width:34px;height:34px;border-radius:50%;background:#F0743A;color:#fff;font:700 19px/34px 'DM Sans',sans-serif;text-align:center">✓</span><span style="font:400 27px/1.4 'DM Sans',sans-serif;color:#1D3F7A">Campos com foco em laranja</span></div>
+</div>
+</div>
+</div>
+</section>
+
+<section data-label="Home · hero" data-screen-label="05" data-speaker-notes="Hero com proposta de valor, dois CTAs e mockup estilizado de ledger e API. Nunca foto de reunião." style="width:100%;height:100%;background:#fff;padding:110px 120px;display:flex;gap:80px;align-items:center;overflow:hidden;position:relative">
+<div style="position:absolute;width:820px;height:820px;border-radius:50%;background:radial-gradient(circle at 45% 45%,rgba(240,116,58,.2),rgba(240,116,58,0) 68%);top:-180px;right:-160px"></div>
+<div style="flex:1.05;position:relative">
+<p style="margin:0 0 22px;font:500 24px/1 'DM Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:#F0743A">Tela 1 · Home</p>
+<h2 style="margin:0;font:600 72px/1.06 Figtree,sans-serif;letter-spacing:-.03em;color:#1D3F7A;text-wrap:pretty">Hero direto, com dois caminhos claros</h2>
+<p style="margin:32px 0 40px;max-width:720px;font:400 30px/1.55 'DM Sans',sans-serif;color:rgba(29,63,122,.72)">BaaS, core bancário, meios de pagamento e adquirência em uma única plataforma. CTA primário para o especialista, secundário para as soluções.</p>
+<div style="display:flex;gap:20px;flex-wrap:wrap">
+<span style="background:#F0743A;color:#fff;font:600 27px/1 'DM Sans',sans-serif;padding:26px 34px;border-radius:18px">Fale com um especialista</span>
+<span style="background:#fff;color:#1D3F7A;border:1px solid rgba(29,63,122,.25);font:600 27px/1 'DM Sans',sans-serif;padding:26px 34px;border-radius:18px">Conheça nossas soluções</span>
+</div>
+<div style="display:flex;gap:44px;margin-top:44px;flex-wrap:wrap">
+<span style="font:500 24px/1 'DM Mono',monospace;color:rgba(29,63,122,.5)">API REST</span>
+<span style="font:500 24px/1 'DM Mono',monospace;color:rgba(29,63,122,.5)">ISO 20022</span>
+<span style="font:500 24px/1 'DM Mono',monospace;color:rgba(29,63,122,.5)">PIX · TED · Cartão</span>
+<span style="font:500 24px/1 'DM Mono',monospace;color:rgba(29,63,122,.5)">Cloud nativo</span>
+</div>
+</div>
+<div style="flex:.95;position:relative;background:#fff;border:1px solid rgba(29,63,122,.1);border-radius:32px;box-shadow:0 40px 90px rgba(18,39,77,.16);padding:44px">
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:34px">
+<span style="font:600 30px/1 Figtree,sans-serif;color:#1D3F7A">Ledger · tempo real</span>
+<span style="font:500 22px/1 'DM Mono',monospace;color:#F0743A;background:rgba(240,116,58,.1);padding:12px 16px;border-radius:12px">ONLINE</span>
+</div>
+<div style="display:flex;align-items:flex-end;gap:14px;height:220px;margin-bottom:34px">
+<span style="flex:1;height:38%;background:rgba(29,63,122,.16);border-radius:10px;display:block"></span>
+<span style="flex:1;height:56%;background:rgba(29,63,122,.16);border-radius:10px;display:block"></span>
+<span style="flex:1;height:44%;background:rgba(29,63,122,.16);border-radius:10px;display:block"></span>
+<span style="flex:1;height:72%;background:#F0743A;border-radius:10px;display:block"></span>
+<span style="flex:1;height:60%;background:rgba(29,63,122,.16);border-radius:10px;display:block"></span>
+<span style="flex:1;height:88%;background:#1D3F7A;border-radius:10px;display:block"></span>
+<span style="flex:1;height:66%;background:rgba(29,63,122,.16);border-radius:10px;display:block"></span>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:24px">
+<div style="background:#ECECEA;border-radius:20px;padding:26px"><p style="margin:0;font:500 22px/1 'DM Mono',monospace;color:rgba(29,63,122,.55)">TPS</p><p style="margin:12px 0 0;font:600 42px/1 Figtree,sans-serif;color:#1D3F7A">16,7K</p></div>
+<div style="background:#ECECEA;border-radius:20px;padding:26px"><p style="margin:0;font:500 22px/1 'DM Mono',monospace;color:rgba(29,63,122,.55)">Latência p99</p><p style="margin:12px 0 0;font:600 42px/1 Figtree,sans-serif;color:#1D3F7A">42 ms</p></div>
+</div>
+<div style="background:#12274d;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:10px">
+<span style="font:400 22px/1.4 'DM Mono',monospace;color:rgba(236,236,234,.55)">POST /v1/accounts</span>
+<span style="font:400 22px/1.4 'DM Mono',monospace;color:#F0743A">201 created · account_id: cbx_8f21</span>
+</div>
+</div>
+</section>
+
+<section data-label="Home · antes e depois" data-screen-label="06" data-speaker-notes="Seção que traduz a dor em ganho concreto. Coluna cinza é o cenário atual, coluna escura é o cenário com a Corebanx." style="width:100%;height:100%;background:#fff;padding:110px 120px;display:flex;flex-direction:column;gap:52px">
+<div>
+<p style="margin:0 0 22px;font:500 24px/1 'DM Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:#F0743A">Home · antes e depois</p>
+<h2 style="margin:0;max-width:1200px;font:600 72px/1.08 Figtree,sans-serif;letter-spacing:-.03em;color:#1D3F7A;text-wrap:pretty">O que muda quando a infraestrutura deixa de ser um problema</h2>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;flex:1">
+<div style="background:#ECECEA;border-radius:32px;padding:56px;display:flex;flex-direction:column;gap:30px">
+<p style="margin:0;font:600 30px/1 'DM Sans',sans-serif;color:rgba(29,63,122,.55)">Sem a Corebanx</p>
+<div style="display:flex;gap:20px;align-items:flex-start"><span style="flex:none;width:30px;height:3px;background:rgba(29,63,122,.3);margin-top:18px;display:block"></span><span style="font:400 30px/1.45 'DM Sans',sans-serif;color:rgba(29,63,122,.62)">Sistemas fragmentados e dados espalhados</span></div>
+<div style="display:flex;gap:20px;align-items:flex-start"><span style="flex:none;width:30px;height:3px;background:rgba(29,63,122,.3);margin-top:18px;display:block"></span><span style="font:400 30px/1.45 'DM Sans',sans-serif;color:rgba(29,63,122,.62)">Integrações que levam meses para entrar em produção</span></div>
+<div style="display:flex;gap:20px;align-items:flex-start"><span style="flex:none;width:30px;height:3px;background:rgba(29,63,122,.3);margin-top:18px;display:block"></span><span style="font:400 30px/1.45 'DM Sans',sans-serif;color:rgba(29,63,122,.62)">Dependência de múltiplos fornecedores</span></div>
+<div style="display:flex;gap:20px;align-items:flex-start"><span style="flex:none;width:30px;height:3px;background:rgba(29,63,122,.3);margin-top:18px;display:block"></span><span style="font:400 30px/1.45 'DM Sans',sans-serif;color:rgba(29,63,122,.62)">Compliance manual, sujeito a falha humana</span></div>
+</div>
+<div style="background:#12274d;border-radius:32px;padding:56px;display:flex;flex-direction:column;gap:30px;position:relative;overflow:hidden">
+<div style="position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(240,116,58,.2),transparent 70%);top:-180px;right:-140px"></div>
+<p style="margin:0;font:600 30px/1 'DM Sans',sans-serif;color:#F0743A;position:relative">Com a Corebanx</p>
+<div style="display:flex;gap:20px;align-items:flex-start;position:relative"><span style="flex:none;width:34px;height:34px;border-radius:50%;background:#F0743A;color:#fff;font:700 19px/34px 'DM Sans',sans-serif;text-align:center">✓</span><span style="font:400 30px/1.45 'DM Sans',sans-serif;color:#ECECEA">Uma única infraestrutura conectada</span></div>
+<div style="display:flex;gap:20px;align-items:flex-start;position:relative"><span style="flex:none;width:34px;height:34px;border-radius:50%;background:#F0743A;color:#fff;font:700 19px/34px 'DM Sans',sans-serif;text-align:center">✓</span><span style="font:400 30px/1.45 'DM Sans',sans-serif;color:#ECECEA">Integração via API REST documentada</span></div>
+<div style="display:flex;gap:20px;align-items:flex-start;position:relative"><span style="flex:none;width:34px;height:34px;border-radius:50%;background:#F0743A;color:#fff;font:700 19px/34px 'DM Sans',sans-serif;text-align:center">✓</span><span style="font:400 30px/1.45 'DM Sans',sans-serif;color:#ECECEA">Conformidade incorporada ao fluxo</span></div>
+<div style="display:flex;gap:20px;align-items:flex-start;position:relative"><span style="flex:none;width:34px;height:34px;border-radius:50%;background:#F0743A;color:#fff;font:700 19px/34px 'DM Sans',sans-serif;text-align:center">✓</span><span style="font:400 30px/1.45 'DM Sans',sans-serif;color:#ECECEA">Escala sob demanda, sem reescrever o core</span></div>
+</div>
+</div>
+</section>
+
+<section data-label="Quatro linhas de produto" data-screen-label="07" data-speaker-notes="Grid de produtos da Home. Cada card leva ao bloco correspondente na página de Produtos e Soluções." style="width:100%;height:100%;background:#ECECEA;padding:110px 120px;display:flex;flex-direction:column;gap:52px">
+<div>
+<p style="margin:0 0 22px;font:500 24px/1 'DM Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:#F0743A">Produtos</p>
+<h2 style="margin:0;font:600 72px/1.08 Figtree,sans-serif;letter-spacing:-.03em;color:#1D3F7A">Quatro linhas de solução, uma só plataforma</h2>
+</div>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:28px;flex:1">
+<div style="background:#fff;border-radius:28px;padding:44px;display:flex;flex-direction:column">
+<div style="width:86px;height:86px;border-radius:26px;background:rgba(240,116,58,.1);display:flex;align-items:center;justify-content:center;margin-bottom:32px"><span style="width:34px;height:34px;border:4px solid #F0743A;border-radius:11px;display:block"></span></div>
+<p style="margin:0;font:600 34px/1.2 Figtree,sans-serif;color:#1D3F7A">BaaS e Core Bancário</p>
+<p style="margin:16px 0 auto;font:400 26px/1.5 'DM Sans',sans-serif;color:rgba(29,63,122,.7)">Conta digital completa, ledger próprio e APIs para operar como banco.</p>
+<span style="font:600 26px/1 'DM Sans',sans-serif;color:#F0743A;margin-top:28px">Saiba mais →</span>
+</div>
+<div style="background:#fff;border-radius:28px;padding:44px;display:flex;flex-direction:column">
+<div style="width:86px;height:86px;border-radius:26px;background:rgba(240,116,58,.1);display:flex;align-items:flex-end;justify-content:center;gap:6px;padding-bottom:28px;margin-bottom:32px"><span style="width:7px;height:14px;background:#F0743A;display:block"></span><span style="width:7px;height:24px;background:#F0743A;display:block"></span><span style="width:7px;height:34px;background:#F0743A;display:block"></span></div>
+<p style="margin:0;font:600 34px/1.2 Figtree,sans-serif;color:#1D3F7A">Meios de Pagamento e Adquirência</p>
+<p style="margin:16px 0 auto;font:400 26px/1.5 'DM Sans',sans-serif;color:rgba(29,63,122,.7)">PIX, TED, boleto, cartão e split em uma camada única.</p>
+<span style="font:600 26px/1 'DM Sans',sans-serif;color:#F0743A;margin-top:28px">Saiba mais →</span>
+</div>
+<div style="background:#fff;border-radius:28px;padding:44px;display:flex;flex-direction:column">
+<div style="width:86px;height:86px;border-radius:26px;background:rgba(240,116,58,.1);display:flex;align-items:center;justify-content:center;margin-bottom:32px"><span style="width:30px;height:30px;border:4px solid #F0743A;transform:rotate(45deg);display:block"></span></div>
+<p style="margin:0;font:600 34px/1.2 Figtree,sans-serif;color:#1D3F7A">White Label</p>
+<p style="margin:16px 0 auto;font:400 26px/1.5 'DM Sans',sans-serif;color:rgba(29,63,122,.7)">Sua marca na frente, nossa tecnologia por trás.</p>
+<span style="font:600 26px/1 'DM Sans',sans-serif;color:#F0743A;margin-top:28px">Saiba mais →</span>
+</div>
+<div style="background:#fff;border-radius:28px;padding:44px;display:flex;flex-direction:column">
+<div style="width:86px;height:86px;border-radius:26px;background:rgba(240,116,58,.1);display:flex;align-items:center;justify-content:center;margin-bottom:32px"><span style="width:34px;height:34px;border:4px solid #F0743A;border-radius:50%;display:block"></span></div>
+<p style="margin:0;font:600 34px/1.2 Figtree,sans-serif;color:#1D3F7A">Segurança e Compliance</p>
+<p style="margin:16px 0 auto;font:400 26px/1.5 'DM Sans',sans-serif;color:rgba(29,63,122,.7)">Biometria, criptografia e monitoramento contínuo por padrão.</p>
+<span style="font:600 26px/1 'DM Sans',sans-serif;color:#F0743A;margin-top:28px">Saiba mais →</span>
+</div>
+</div>
+</section>
+
+<section data-label="Números" data-screen-label="08" data-speaker-notes="Faixa de números com contadores animados no site. Dados fornecidos pela Corebanx." style="width:100%;height:100%;background:#12274d;padding:110px 120px;display:flex;flex-direction:column;justify-content:center;gap:70px;position:relative;overflow:hidden">
+<div style="position:absolute;width:900px;height:900px;border-radius:50%;background:radial-gradient(circle,rgba(240,116,58,.16),transparent 70%);bottom:-420px;left:-200px"></div>
+<div style="position:relative">
+<p style="margin:0 0 22px;font:500 24px/1 'DM Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:#F0743A">Faixa de números</p>
+<h2 style="margin:0;font:600 72px/1.08 Figtree,sans-serif;letter-spacing:-.03em;color:#fff">Escala comprovada em produção</h2>
+</div>
+<div style="display:grid;grid-template-columns:repeat(5,1fr);gap:32px;position:relative">
+<div><p style="margin:0;font:600 96px/1 Figtree,sans-serif;letter-spacing:-.04em;color:#fff">16,7K</p><p style="margin:18px 0 0;font:500 26px/1.3 'DM Mono',monospace;color:rgba(236,236,234,.6)">TPS comprovado</p></div>
+<div><p style="margin:0;font:600 96px/1 Figtree,sans-serif;letter-spacing:-.04em;color:#fff">7</p><p style="margin:18px 0 0;font:500 26px/1.3 'DM Mono',monospace;color:rgba(236,236,234,.6)">Rails de pagamento</p></div>
+<div><p style="margin:0;font:600 96px/1 Figtree,sans-serif;letter-spacing:-.04em;color:#fff">11</p><p style="margin:18px 0 0;font:500 26px/1.3 'DM Mono',monospace;color:rgba(236,236,234,.6)">Engines de ledger</p></div>
+<div><p style="margin:0;font:600 96px/1 Figtree,sans-serif;letter-spacing:-.04em;color:#fff">19</p><p style="margin:18px 0 0;font:500 26px/1.3 'DM Mono',monospace;color:rgba(236,236,234,.6)">Mensagens ISO 20022</p></div>
+<div><p style="margin:0;font:600 96px/1 Figtree,sans-serif;letter-spacing:-.04em;color:#F0743A">99,99%</p><p style="margin:18px 0 0;font:500 26px/1.3 'DM Mono',monospace;color:rgba(236,236,234,.6)">Uptime SLA</p></div>
+</div>
+</section>
+
+<section data-label="Produtos e Soluções" data-screen-label="09" data-speaker-notes="Tela 2. Blocos alternados: ilustração de um lado, checklist e CTA do outro. Cada bloco termina em Fale sobre este produto." style="width:100%;height:100%;background:#fff;padding:110px 120px;display:flex;flex-direction:column;gap:48px">
+<div>
+<p style="margin:0 0 22px;font:500 24px/1 'DM Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:#F0743A">Tela 2 · Produtos e Soluções</p>
+<h2 style="margin:0;max-width:1300px;font:600 72px/1.08 Figtree,sans-serif;letter-spacing:-.03em;color:#1D3F7A;text-wrap:pretty">Uma infraestrutura, todas as soluções financeiras que seu negócio precisa</h2>
+</div>
+<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:28px;flex:1">
+<div style="background:#ECECEA;border-radius:28px;padding:44px;display:flex;flex-direction:column;gap:18px">
+<p style="margin:0;font:500 24px/1 'DM Mono',monospace;color:#F0743A">01 · BaaS e Core Bancário</p>
+<p style="margin:0;font:600 36px/1.15 Figtree,sans-serif;color:#1D3F7A">Opere como banco sem construir um banco</p>
+<p style="margin:0;font:400 26px/1.5 'DM Sans',sans-serif;color:rgba(29,63,122,.7)">Conta digital com funções de banco, multiplataforma, conciliação e transações globais.</p>
+</div>
+<div style="background:#ECECEA;border-radius:28px;padding:44px;display:flex;flex-direction:column;gap:18px">
+<p style="margin:0;font:500 24px/1 'DM Mono',monospace;color:#F0743A">02 · Meios de Pagamento e Adquirência</p>
+<p style="margin:0;font:600 36px/1.15 Figtree,sans-serif;color:#1D3F7A">Todos os rails em uma camada única</p>
+<p style="margin:0;font:400 26px/1.5 'DM Sans',sans-serif;color:rgba(29,63,122,.7)">PIX, TED, boleto, cartão, QR Code, split, maquininhas, gateway e recorrência.</p>
+</div>
+<div style="background:#ECECEA;border-radius:28px;padding:44px;display:flex;flex-direction:column;gap:18px">
+<p style="margin:0;font:500 24px/1 'DM Mono',monospace;color:#F0743A">03 · White Label</p>
+<p style="margin:0;font:600 36px/1.15 Figtree,sans-serif;color:#1D3F7A">Sua marca na frente, a Corebanx por trás</p>
+<p style="margin:0;font:400 26px/1.5 'DM Sans',sans-serif;color:rgba(29,63,122,.7)">Personalização completa de app e internet banking, publicados no seu nome.</p>
+</div>
+<div style="background:#12274d;border-radius:28px;padding:44px;display:flex;flex-direction:column;gap:18px">
+<p style="margin:0;font:500 24px/1 'DM Mono',monospace;color:#F0743A">04 · Segurança e Compliance</p>
+<p style="margin:0;font:600 36px/1.15 Figtree,sans-serif;color:#fff">Regulatório dentro da própria transação</p>
+<p style="margin:0;font:400 26px/1.5 'DM Sans',sans-serif;color:rgba(236,236,234,.7)">Biometria, geolocalização por transação, criptografia e prevenção a fraude.</p>
+</div>
+</div>
+</section>
+
+<section data-label="Para Bancos" data-screen-label="10" data-speaker-notes="Tela 3, modelo de segmento. As páginas Para Fintechs, Subadquirentes e Varejo seguem a mesma estrutura, trocando dor, casos de uso e prova social." style="width:100%;height:100%;background:#fff;padding:110px 120px;display:flex;flex-direction:column;gap:48px">
+<div>
+<p style="margin:0 0 22px;font:500 24px/1 'DM Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:#F0743A">Tela 3 · Soluções · Para Bancos</p>
+<h2 style="margin:0;font:600 72px/1.08 Figtree,sans-serif;letter-spacing:-.03em;color:#1D3F7A">Bancos que evoluem sem recomeçar do zero</h2>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;flex:1">
+<div style="display:flex;flex-direction:column;gap:24px">
+<p style="margin:0;font:600 32px/1.2 Figtree,sans-serif;color:#1D3F7A">Estrutura da página</p>
+<div style="display:flex;gap:18px;align-items:flex-start"><span style="flex:none;width:32px;height:32px;border-radius:50%;background:#F0743A;color:#fff;font:700 18px/32px 'DM Sans',sans-serif;text-align:center">✓</span><span style="font:400 28px/1.45 'DM Sans',sans-serif;color:#1D3F7A">Hero com a dor específica do segmento</span></div>
+<div style="display:flex;gap:18px;align-items:flex-start"><span style="flex:none;width:32px;height:32px;border-radius:50%;background:#F0743A;color:#fff;font:700 18px/32px 'DM Sans',sans-serif;text-align:center">✓</span><span style="font:400 28px/1.45 'DM Sans',sans-serif;color:#1D3F7A">Contexto de mercado em três recortes</span></div>
+<div style="display:flex;gap:18px;align-items:flex-start"><span style="flex:none;width:32px;height:32px;border-radius:50%;background:#F0743A;color:#fff;font:700 18px/32px 'DM Sans',sans-serif;text-align:center">✓</span><span style="font:400 28px/1.45 'DM Sans',sans-serif;color:#1D3F7A">Antes e depois adaptado à operação do banco</span></div>
+<div style="display:flex;gap:18px;align-items:flex-start"><span style="flex:none;width:32px;height:32px;border-radius:50%;background:#F0743A;color:#fff;font:700 18px/32px 'DM Sans',sans-serif;text-align:center">✓</span><span style="font:400 28px/1.45 'DM Sans',sans-serif;color:#1D3F7A">Abas com três casos de uso e checklists</span></div>
+<div style="display:flex;gap:18px;align-items:flex-start"><span style="flex:none;width:32px;height:32px;border-radius:50%;background:#F0743A;color:#fff;font:700 18px/32px 'DM Sans',sans-serif;text-align:center">✓</span><span style="font:400 28px/1.45 'DM Sans',sans-serif;color:#1D3F7A">Diferenciais, prova social e CTA final</span></div>
+</div>
+<div style="background:#ECECEA;border-radius:28px;padding:44px;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;gap:12px;flex-wrap:wrap">
+<span style="background:#F0743A;color:#fff;font:600 24px/1 'DM Sans',sans-serif;padding:18px 22px;border-radius:14px">Conta digital white label</span>
+<span style="background:#fff;color:#1D3F7A;font:600 24px/1 'DM Sans',sans-serif;padding:18px 22px;border-radius:14px">Adquirência própria</span>
+<span style="background:#fff;color:#1D3F7A;font:600 24px/1 'DM Sans',sans-serif;padding:18px 22px;border-radius:14px">Rails</span>
+</div>
+<p style="margin:0;font:600 34px/1.2 Figtree,sans-serif;color:#1D3F7A">Conta digital white label</p>
+<p style="margin:0;font:400 27px/1.5 'DM Sans',sans-serif;color:rgba(29,63,122,.72)">Lance uma conta completa com a marca do banco, sem tocar no sistema legado.</p>
+<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:auto">
+<div style="background:#fff;border-radius:20px;padding:26px"><p style="margin:0;font:600 40px/1 Figtree,sans-serif;color:#1D3F7A">D+0</p><p style="margin:12px 0 0;font:400 24px/1.3 'DM Sans',sans-serif;color:rgba(29,63,122,.65)">liquidação no mesmo dia</p></div>
+<div style="background:#fff;border-radius:20px;padding:26px"><p style="margin:0;font:600 40px/1 Figtree,sans-serif;color:#F0743A">99,99%</p><p style="margin:12px 0 0;font:400 24px/1.3 'DM Sans',sans-serif;color:rgba(29,63,122,.65)">uptime contratado em SLA</p></div>
+</div>
+</div>
+</div>
+</section>
+
+<section data-label="Contato" data-screen-label="11" data-speaker-notes="Tela 6. Formulário objetivo com sete campos, mais contato comercial, endereço e opção de agendar conversa." style="width:100%;height:100%;background:#ECECEA;padding:110px 120px;display:flex;gap:40px;align-items:stretch">
+<div style="flex:1.2;background:#fff;border-radius:32px;padding:56px;display:flex;flex-direction:column">
+<p style="margin:0 0 16px;font:500 24px/1 'DM Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:#F0743A">Tela 6 · Contato</p>
+<h2 style="margin:0 0 12px;font:600 56px/1.08 Figtree,sans-serif;letter-spacing:-.025em;color:#1D3F7A">Fale com um especialista</h2>
+<p style="margin:0 0 40px;font:400 28px/1.5 'DM Sans',sans-serif;color:rgba(29,63,122,.7)">Responderemos em até um dia útil.</p>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:22px">
+<div style="border:1px solid rgba(29,63,122,.2);border-radius:18px;padding:24px 26px;font:400 26px/1 'DM Sans',sans-serif;color:rgba(29,63,122,.45)">Nome completo</div>
+<div style="border:1px solid rgba(29,63,122,.2);border-radius:18px;padding:24px 26px;font:400 26px/1 'DM Sans',sans-serif;color:rgba(29,63,122,.45)">Empresa</div>
+<div style="border:1px solid rgba(29,63,122,.2);border-radius:18px;padding:24px 26px;font:400 26px/1 'DM Sans',sans-serif;color:rgba(29,63,122,.45)">Cargo</div>
+<div style="border:1px solid #F0743A;border-radius:18px;padding:24px 26px;font:400 26px/1 'DM Sans',sans-serif;color:#1D3F7A">nome@empresa.com.br</div>
+<div style="border:1px solid rgba(29,63,122,.2);border-radius:18px;padding:24px 26px;font:400 26px/1 'DM Sans',sans-serif;color:rgba(29,63,122,.45)">Telefone</div>
+<div style="border:1px solid rgba(29,63,122,.2);border-radius:18px;padding:24px 26px;font:400 26px/1 'DM Sans',sans-serif;color:rgba(29,63,122,.45)">Segmento</div>
+</div>
+<div style="margin-top:22px;border:1px solid rgba(29,63,122,.2);border-radius:18px;padding:24px 26px;font:400 26px/1 'DM Sans',sans-serif;color:rgba(29,63,122,.45);flex:1">Mensagem</div>
+<div style="display:flex;gap:28px;align-items:center;margin-top:32px">
+<span style="background:#F0743A;color:#fff;font:600 27px/1 'DM Sans',sans-serif;padding:26px 34px;border-radius:18px">Enviar mensagem</span>
+<span style="font:600 27px/1 'DM Sans',sans-serif;color:#F0743A">Agendar uma conversa →</span>
+</div>
+</div>
+<div style="flex:.8;display:flex;flex-direction:column;gap:24px">
+<div style="background:#12274d;border-radius:32px;padding:48px;flex:1;display:flex;flex-direction:column;justify-content:center">
+<p style="margin:0 0 26px;font:500 24px/1 'DM Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:#F0743A">Comercial</p>
+<p style="margin:0 0 12px;font:500 32px/1.4 'DM Sans',sans-serif;color:#fff">comercial@corebanx.com.br</p>
+<p style="margin:0 0 26px;font:500 32px/1.4 'DM Sans',sans-serif;color:#fff">+55 11 0000-0000</p>
+<p style="margin:0;font:400 26px/1.5 'DM Sans',sans-serif;color:rgba(236,236,234,.65)">Atendimento de segunda a sexta, das 9h às 18h.</p>
+</div>
+<div style="background:#fff;border-radius:32px;padding:48px;flex:1;display:flex;flex-direction:column;justify-content:center">
+<p style="margin:0 0 22px;font:500 24px/1 'DM Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:#F0743A">Endereço</p>
+<p style="margin:0;font:400 28px/1.5 'DM Sans',sans-serif;color:rgba(29,63,122,.75)">Av. Placeholder, 1000 · 10º andar<br />São Paulo, SP · 00000-000</p>
+</div>
+</div>
+</section>
+
+<section data-label="Mobile first" data-screen-label="12" data-speaker-notes="Todas as telas foram construídas mobile first: o protótipo alterna entre desktop e mobile com um clique." style="width:100%;height:100%;background:#fff;padding:110px 120px;display:flex;gap:80px;align-items:center">
+<div style="flex:1">
+<p style="margin:0 0 22px;font:500 24px/1 'DM Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:#F0743A">UX e responsividade</p>
+<h2 style="margin:0;font:600 72px/1.06 Figtree,sans-serif;letter-spacing:-.03em;color:#1D3F7A;text-wrap:pretty">Mobile first, com adaptação clara para tablet e desktop</h2>
+<div style="display:flex;flex-direction:column;gap:24px;margin-top:44px">
+<div style="display:flex;gap:18px;align-items:flex-start"><span style="flex:none;width:32px;height:32px;border-radius:50%;background:#F0743A;color:#fff;font:700 18px/32px 'DM Sans',sans-serif;text-align:center">✓</span><span style="font:400 29px/1.45 'DM Sans',sans-serif;color:#1D3F7A">Menu recolhido em drawer no mobile</span></div>
+<div style="display:flex;gap:18px;align-items:flex-start"><span style="flex:none;width:32px;height:32px;border-radius:50%;background:#F0743A;color:#fff;font:700 18px/32px 'DM Sans',sans-serif;text-align:center">✓</span><span style="font:400 29px/1.45 'DM Sans',sans-serif;color:#1D3F7A">Grades que reorganizam por largura, sem quebra</span></div>
+<div style="display:flex;gap:18px;align-items:flex-start"><span style="flex:none;width:32px;height:32px;border-radius:50%;background:#F0743A;color:#fff;font:700 18px/32px 'DM Sans',sans-serif;text-align:center">✓</span><span style="font:400 29px/1.45 'DM Sans',sans-serif;color:#1D3F7A">Alvos de toque confortáveis em todos os CTAs</span></div>
+<div style="display:flex;gap:18px;align-items:flex-start"><span style="flex:none;width:32px;height:32px;border-radius:50%;background:#F0743A;color:#fff;font:700 18px/32px 'DM Sans',sans-serif;text-align:center">✓</span><span style="font:400 29px/1.45 'DM Sans',sans-serif;color:#1D3F7A">Contraste verificado em fundos claros e escuros</span></div>
+</div>
+</div>
+<div style="flex:1;display:flex;gap:36px;justify-content:center;align-items:center">
+<div style="width:300px;background:#12274d;border-radius:44px;padding:22px;box-shadow:0 40px 90px rgba(18,39,77,.2)">
+<div style="height:8px;width:70px;background:rgba(236,236,234,.3);border-radius:4px;margin:4px auto 22px"></div>
+<div style="background:#fff;border-radius:28px;padding:24px;display:flex;flex-direction:column;gap:16px">
+<span style="width:44px;height:44px;border-radius:15px;background:#F0743A;display:block"></span>
+<span style="height:14px;width:80%;background:rgba(29,63,122,.14);border-radius:7px;display:block"></span>
+<span style="height:14px;width:58%;background:rgba(29,63,122,.14);border-radius:7px;display:block"></span>
+<span style="height:60px;background:#F0743A;border-radius:16px;display:block"></span>
+<span style="height:60px;background:#ECECEA;border-radius:16px;display:block"></span>
+<span style="height:120px;background:#ECECEA;border-radius:16px;display:block"></span>
+</div>
+</div>
+<div style="width:300px;background:#ECECEA;border-radius:44px;padding:22px">
+<div style="height:8px;width:70px;background:rgba(29,63,122,.2);border-radius:4px;margin:4px auto 22px"></div>
+<div style="background:#fff;border-radius:28px;padding:24px;display:flex;flex-direction:column;gap:16px">
+<span style="width:44px;height:44px;border-radius:50%;background:#1D3F7A;display:block"></span>
+<span style="height:14px;width:66%;background:rgba(29,63,122,.14);border-radius:7px;display:block"></span>
+<span style="height:14px;width:48%;background:rgba(29,63,122,.14);border-radius:7px;display:block"></span>
+<span style="height:120px;background:rgba(240,116,58,.14);border-radius:16px;display:block"></span>
+<span style="height:60px;background:#ECECEA;border-radius:16px;display:block"></span>
+<span style="height:60px;background:#ECECEA;border-radius:16px;display:block"></span>
+</div>
+</div>
+</div>
+</section>
+
+<section data-label="Próximos passos" data-screen-label="13" data-speaker-notes="Pendências para fechar o mockup: logo oficial, logos de parceiros, depoimento e cases reais." style="width:100%;height:100%;background:#F0743A;padding:110px 120px;display:flex;flex-direction:column;justify-content:center;gap:60px">
+<div>
+<p style="margin:0 0 22px;font:500 24px/1 'DM Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.75)">Próximos passos</p>
+<h2 style="margin:0;max-width:1300px;font:600 80px/1.06 Figtree,sans-serif;letter-spacing:-.03em;color:#fff;text-wrap:pretty">O que falta para fechar o mockup</h2>
+</div>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:28px">
+<div style="background:rgba(255,255,255,.14);border-radius:28px;padding:40px"><p style="margin:0;font:600 30px/1.2 Figtree,sans-serif;color:#fff">Logo oficial</p><p style="margin:14px 0 0;font:400 26px/1.5 'DM Sans',sans-serif;color:rgba(255,255,255,.82)">Arquivo vetorial para substituir o wordmark provisório.</p></div>
+<div style="background:rgba(255,255,255,.14);border-radius:28px;padding:40px"><p style="margin:0;font:600 30px/1.2 Figtree,sans-serif;color:#fff">Logos de parceiros</p><p style="margin:14px 0 0;font:400 26px/1.5 'DM Sans',sans-serif;color:rgba(255,255,255,.82)">Prova social da Home, da página de segmento e de Cases.</p></div>
+<div style="background:rgba(255,255,255,.14);border-radius:28px;padding:40px"><p style="margin:0;font:600 30px/1.2 Figtree,sans-serif;color:#fff">Depoimento</p><p style="margin:14px 0 0;font:400 26px/1.5 'DM Sans',sans-serif;color:rgba(255,255,255,.82)">Frase, nome, cargo e foto do parceiro em destaque.</p></div>
+<div style="background:#12274d;border-radius:28px;padding:40px"><p style="margin:0;font:600 30px/1.2 Figtree,sans-serif;color:#fff">Cases publicáveis</p><p style="margin:14px 0 0;font:400 26px/1.5 'DM Sans',sans-serif;color:rgba(236,236,234,.78)">Cliente, segmento e resultado em uma frase.</p></div>
+</div>
+</section>
+
+</x-import>
+</x-dc>
+</body>
+</html>

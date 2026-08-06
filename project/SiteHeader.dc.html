@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<header onMouseLeave="{{ closeMega }}" style="position:sticky;top:0;z-index:40;background:rgba(255,255,255,.9);backdrop-filter:blur(14px);border-bottom:1px solid rgba(29,63,122,.1);box-shadow:{{ hShadow }};transition:box-shadow .22s">
+<div style="max-width:1180px;margin:0 auto;padding:0 clamp(18px,3.5cqw,40px);height:{{ hHeight }};display:flex;align-items:center;gap:28px">
+<a href="#" onClick="{{ goHome }}" style="display:flex;align-items:center;text-decoration:none;flex:none">
+<img src="assets/logo-corebanx.png" alt="Corebanx" style="height:26px;width:auto;display:block" />
+</a>
+<nav style="display:{{ menuDisplay }};align-items:center;gap:4px;margin-left:auto">
+<button onMouseEnter="{{ openProdutos }}" onClick="{{ toggleProdutos }}" style="border:0;cursor:pointer;background:{{ bgProdutos }};display:flex;align-items:center;gap:7px;font:500 14.5px/1 'DM Sans',sans-serif;color:#1D3F7A;padding:10px 13px;border-radius:9px;transition:background .18s">Produtos<span style="width:6px;height:6px;border-right:1.6px solid #F0743A;border-bottom:1.6px solid #F0743A;transform:{{ caretProdutos }};transition:transform .2s;display:block"></span></button>
+<button onMouseEnter="{{ openSolucoes }}" onClick="{{ toggleSolucoes }}" style="border:0;cursor:pointer;background:{{ bgSolucoes }};display:flex;align-items:center;gap:7px;font:500 14.5px/1 'DM Sans',sans-serif;color:#1D3F7A;padding:10px 13px;border-radius:9px;transition:background .18s">Soluções<span style="width:6px;height:6px;border-right:1.6px solid #F0743A;border-bottom:1.6px solid #F0743A;transform:{{ caretSolucoes }};transition:transform .2s;display:block"></span></button>
+<a href="#" onMouseEnter="{{ closeMega }}" onClick="{{ navQuemSomos }}" style="font:500 14.5px/1 'DM Sans',sans-serif;color:#1D3F7A;text-decoration:none;padding:10px 13px;border-radius:9px;transition:background .18s" style-hover="background:#ECECEA">Quem Somos</a>
+<a href="#" onMouseEnter="{{ closeMega }}" onClick="{{ navCases }}" style="font:500 14.5px/1 'DM Sans',sans-serif;color:#1D3F7A;text-decoration:none;padding:10px 13px;border-radius:9px;transition:background .18s" style-hover="background:#ECECEA">Cases</a>
+</nav>
+<a href="#" onMouseEnter="{{ closeMega }}" onClick="{{ navContato }}" style="display:{{ ctaDisplay }};flex:none;background:#F0743A;color:#fff;font:600 14.5px/1 'DM Sans',sans-serif;text-decoration:none;padding:13px 18px;border-radius:11px;transition:background .18s,transform .18s" style-hover="background:#d9612c;transform:translateY(-1px)">Fale com um especialista</a>
+<button onClick="{{ toggleOverlay }}" style="display:{{ burgerDisplay }};margin-left:auto;flex:none;width:42px;height:42px;border-radius:11px;border:1px solid rgba(29,63,122,.18);background:{{ burgerBg }};flex-direction:column;justify-content:center;align-items:center;gap:4px;cursor:pointer;transition:background .18s">
+<span style="width:16px;height:1.6px;background:#1D3F7A;display:block;transform:{{ burgerTop }};transition:transform .2s"></span>
+<span style="width:16px;height:1.6px;background:#1D3F7A;display:block;opacity:{{ burgerMidOpacity }};transition:opacity .18s"></span>
+<span style="width:16px;height:1.6px;background:#1D3F7A;display:block;transform:{{ burgerBottom }};transition:transform .2s"></span>
+</button>
+</div>
+<div style="display:{{ megaDisplay }};position:absolute;left:0;right:0;top:100%;padding:0 clamp(18px,3.5cqw,40px) 18px">
+<div style="max-width:1180px;margin:0 auto;background:#fff;border:1px solid rgba(29,63,122,.1);border-radius:20px;box-shadow:0 22px 50px rgba(18,39,77,.14);padding:22px">
+<div style="display:{{ dMegaProdutos }};grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px 18px">
+<div>
+<p style="margin:0 0 6px;padding:0 12px;font:600 11px/1 'DM Mono',monospace;letter-spacing:.13em;text-transform:uppercase;color:#F0743A">Núcleo Bancário</p>
+<a href="#" onClick="{{ navBaas }}" style="display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:13px;text-decoration:none;transition:background .18s" style-hover="background:#ECECEA">
+<span style="flex:none;width:34px;height:34px;border-radius:11px;background:rgba(240,116,58,.1);display:flex;align-items:center;justify-content:center"><span style="width:15px;height:15px;border:2px solid #F0743A;border-radius:5px;display:block"></span></span>
+<span style="display:block"><span style="display:block;font:600 14.5px/1.3 Figtree,sans-serif;color:#1D3F7A">BaaS e Core Bancário</span><span style="display:block;margin-top:4px;font:400 12.5px/1.4 'DM Sans',sans-serif;color:rgba(29,63,122,.62)">Conta digital, ledger próprio e APIs REST.</span></span>
+</a>
+<a href="#" onClick="{{ navDashboard }}" style="display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:13px;text-decoration:none;transition:background .18s" style-hover="background:#ECECEA">
+<span style="flex:none;width:34px;height:34px;border-radius:11px;background:rgba(240,116,58,.1);display:flex;align-items:flex-end;justify-content:center;gap:3px;padding-bottom:11px"><span style="width:4px;height:6px;background:#F0743A;display:block"></span><span style="width:4px;height:10px;background:#F0743A;display:block"></span><span style="width:4px;height:14px;background:#F0743A;display:block"></span></span>
+<span style="display:block"><span style="display:block;font:600 14.5px/1.3 Figtree,sans-serif;color:#1D3F7A">Dashboard de Gestão</span><span style="display:block;margin-top:4px;font:400 12.5px/1.4 'DM Sans',sans-serif;color:rgba(29,63,122,.62)">Saldos, transações e conciliação em tempo real.</span></span>
+</a>
+<a href="#" onClick="{{ navWhitelabel }}" style="display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:13px;text-decoration:none;transition:background .18s" style-hover="background:#ECECEA">
+<span style="flex:none;width:34px;height:34px;border-radius:11px;background:rgba(240,116,58,.1);display:flex;align-items:center;justify-content:center"><span style="width:13px;height:13px;border:2px solid #F0743A;transform:rotate(45deg);display:block"></span></span>
+<span style="display:block"><span style="display:block;font:600 14.5px/1.3 Figtree,sans-serif;color:#1D3F7A">White Label</span><span style="display:block;margin-top:4px;font:400 12.5px/1.4 'DM Sans',sans-serif;color:rgba(29,63,122,.62)">Sua marca na frente, nossa tecnologia por trás.</span></span>
+</a>
+</div>
+<div>
+<p style="margin:0 0 6px;padding:0 12px;font:600 11px/1 'DM Mono',monospace;letter-spacing:.13em;text-transform:uppercase;color:#F0743A">Meios de Pagamento e Adquirência</p>
+<a href="#" onClick="{{ navTrilhos }}" style="display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:13px;text-decoration:none;transition:background .18s" style-hover="background:#ECECEA">
+<span style="flex:none;width:34px;height:34px;border-radius:11px;background:rgba(240,116,58,.1);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px"><span style="width:16px;height:2px;background:#F0743A;display:block"></span><span style="width:11px;height:2px;background:#F0743A;display:block"></span><span style="width:14px;height:2px;background:#F0743A;display:block"></span></span>
+<span style="display:block"><span style="display:block;font:600 14.5px/1.3 Figtree,sans-serif;color:#1D3F7A">Trilhos de pagamento</span><span style="display:block;margin-top:4px;font:400 12.5px/1.4 'DM Sans',sans-serif;color:rgba(29,63,122,.62)">Pix, TED, boleto, QR Code e COMPE em uma camada.</span></span>
+</a>
+<a href="#" onClick="{{ navCartoes }}" style="display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:13px;text-decoration:none;transition:background .18s" style-hover="background:#ECECEA">
+<span style="flex:none;width:34px;height:34px;border-radius:11px;background:rgba(240,116,58,.1);display:flex;align-items:center;justify-content:center"><span style="width:17px;height:12px;border:2px solid #F0743A;border-radius:3px;display:block"></span></span>
+<span style="display:block"><span style="display:block;font:600 14.5px/1.3 Figtree,sans-serif;color:#1D3F7A">Integração de Cartões</span><span style="display:block;margin-top:4px;font:400 12.5px/1.4 'DM Sans',sans-serif;color:rgba(29,63,122,.62)">Emissão e processamento de crédito e débito.</span></span>
+</a>
+</div>
+<div>
+<p style="margin:0 0 6px;padding:0 12px;font:600 11px/1 'DM Mono',monospace;letter-spacing:.13em;text-transform:uppercase;color:#F0743A">Soluções Financeiras Avançadas</p>
+<a href="#" onClick="{{ navInvestimentos }}" style="display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:13px;text-decoration:none;transition:background .18s" style-hover="background:#ECECEA">
+<span style="flex:none;width:34px;height:34px;border-radius:11px;background:rgba(240,116,58,.1);display:flex;align-items:flex-end;justify-content:center;gap:3px;padding-bottom:11px"><span style="width:4px;height:8px;background:#F0743A;display:block"></span><span style="width:4px;height:14px;background:#F0743A;display:block"></span></span>
+<span style="display:block"><span style="display:block;font:600 14.5px/1.3 Figtree,sans-serif;color:#1D3F7A">Investimentos</span><span style="display:block;margin-top:4px;font:400 12.5px/1.4 'DM Sans',sans-serif;color:rgba(29,63,122,.62)">Produtos de investimento dentro da conta digital.</span></span>
+</a>
+<a href="#" onClick="{{ navConvenios }}" style="display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:13px;text-decoration:none;transition:background .18s" style-hover="background:#ECECEA">
+<span style="flex:none;width:34px;height:34px;border-radius:11px;background:rgba(240,116,58,.1);display:flex;align-items:center;justify-content:center;gap:4px"><span style="width:9px;height:9px;border:2px solid #F0743A;border-radius:50%;display:block"></span><span style="width:9px;height:9px;border:2px solid #F0743A;border-radius:50%;display:block"></span></span>
+<span style="display:block"><span style="display:block;font:600 14.5px/1.3 Figtree,sans-serif;color:#1D3F7A">Convênios</span><span style="display:block;margin-top:4px;font:400 12.5px/1.4 'DM Sans',sans-serif;color:rgba(29,63,122,.62)">Arranjos entre instituições com regra própria.</span></span>
+</a>
+<a href="#" onClick="{{ navCobranca }}" style="display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:13px;text-decoration:none;transition:background .18s" style-hover="background:#ECECEA">
+<span style="flex:none;width:34px;height:34px;border-radius:11px;background:rgba(240,116,58,.1);display:flex;align-items:center;justify-content:center;gap:2px"><span style="width:2px;height:15px;background:#F0743A;display:block"></span><span style="width:3px;height:15px;background:#F0743A;display:block"></span><span style="width:2px;height:15px;background:#F0743A;display:block"></span><span style="width:4px;height:15px;background:#F0743A;display:block"></span></span>
+<span style="display:block"><span style="display:block;font:600 14.5px/1.3 Figtree,sans-serif;color:#1D3F7A">Cobrança</span><span style="display:block;margin-top:4px;font:400 12.5px/1.4 'DM Sans',sans-serif;color:rgba(29,63,122,.62)">Boletos, carnês e recorrência em um painel.</span></span>
+</a>
+</div>
+<div>
+<p style="margin:0 0 6px;padding:0 12px;font:600 11px/1 'DM Mono',monospace;letter-spacing:.13em;text-transform:uppercase;color:#F0743A">Segurança, Compliance e Testes</p>
+<a href="#" onClick="{{ navSeguranca }}" style="display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:13px;text-decoration:none;transition:background .18s" style-hover="background:#ECECEA">
+<span style="flex:none;width:34px;height:34px;border-radius:11px;background:rgba(240,116,58,.1);display:flex;align-items:center;justify-content:center"><span style="width:15px;height:15px;border:2px solid #F0743A;border-radius:50%;display:block"></span></span>
+<span style="display:block"><span style="display:block;font:600 14.5px/1.3 Figtree,sans-serif;color:#1D3F7A">Segurança e Compliance</span><span style="display:block;margin-top:4px;font:400 12.5px/1.4 'DM Sans',sans-serif;color:rgba(29,63,122,.62)">Biometria, criptografia e geolocalização.</span></span>
+</a>
+<a href="#" onClick="{{ navAntifraude }}" style="display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:13px;text-decoration:none;transition:background .18s" style-hover="background:#ECECEA">
+<span style="flex:none;width:34px;height:34px;border-radius:11px;background:rgba(240,116,58,.1);display:flex;align-items:center;justify-content:center"><span style="width:14px;height:14px;border:2px solid #F0743A;transform:rotate(45deg);display:block"></span></span>
+<span style="display:block"><span style="display:block;font:600 14.5px/1.3 Figtree,sans-serif;color:#1D3F7A">Antifraude e PLD</span><span style="display:block;margin-top:4px;font:400 12.5px/1.4 'DM Sans',sans-serif;color:rgba(29,63,122,.62)">Scoring em tempo real, KYC contínuo e bloqueio.</span></span>
+</a>
+<a href="#" onClick="{{ navRegulatorio }}" style="display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:13px;text-decoration:none;transition:background .18s" style-hover="background:#ECECEA">
+<span style="flex:none;width:34px;height:34px;border-radius:11px;background:rgba(240,116,58,.1);display:flex;align-items:center;justify-content:center"><span style="width:12px;height:16px;border:2px solid #F0743A;border-radius:3px;display:block"></span></span>
+<span style="display:block"><span style="display:block;font:600 14.5px/1.3 Figtree,sans-serif;color:#1D3F7A">Regulatório</span><span style="display:block;margin-top:4px;font:400 12.5px/1.4 'DM Sans',sans-serif;color:rgba(29,63,122,.62)">CADOCs, COSIF, FGC, e-Financeira e mais.</span></span>
+</a>
+<a href="#" onClick="{{ navSandbox }}" style="display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:13px;text-decoration:none;transition:background .18s" style-hover="background:#ECECEA">
+<span style="flex:none;width:34px;height:34px;border-radius:11px;background:rgba(240,116,58,.1);display:flex;align-items:center;justify-content:center"><span style="width:15px;height:15px;border:2px solid #F0743A;border-radius:5px;border-style:dashed;display:block"></span></span>
+<span style="display:block"><span style="display:block;font:600 14.5px/1.3 Figtree,sans-serif;color:#1D3F7A">Sandbox para Testes</span><span style="display:block;margin-top:4px;font:400 12.5px/1.4 'DM Sans',sans-serif;color:rgba(29,63,122,.62)">Ambiente gratuito, sem cartão de crédito.</span></span>
+</a>
+</div>
+</div>
+<div style="display:{{ dMegaSolucoes }};grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:8px">
+<a href="#" onClick="{{ navBancos }}" style="display:flex;gap:14px;align-items:flex-start;padding:16px;border-radius:14px;text-decoration:none;transition:background .18s" style-hover="background:#ECECEA">
+<span style="flex:none;width:40px;height:40px;border-radius:12px;background:#ECECEA;display:flex;align-items:center;justify-content:center"><span style="width:16px;height:16px;border:2px solid #1D3F7A;border-radius:5px;display:block"></span></span>
+<span style="display:block"><span style="display:block;font:600 15px/1.3 Figtree,sans-serif;color:#1D3F7A">Para Bancos</span><span style="display:block;margin-top:5px;font:400 13.5px/1.45 'DM Sans',sans-serif;color:rgba(29,63,122,.65)">Novos produtos sobre o core que já existe.</span></span>
+</a>
+<a href="#" onClick="{{ navBancos }}" style="display:flex;gap:14px;align-items:flex-start;padding:16px;border-radius:14px;text-decoration:none;transition:background .18s" style-hover="background:#ECECEA">
+<span style="flex:none;width:40px;height:40px;border-radius:12px;background:#ECECEA;display:flex;align-items:center;justify-content:center"><span style="width:16px;height:16px;border:2px solid #1D3F7A;border-radius:50%;display:block"></span></span>
+<span style="display:block"><span style="display:block;font:600 15px/1.3 Figtree,sans-serif;color:#1D3F7A">Para Fintechs</span><span style="display:block;margin-top:5px;font:400 13.5px/1.45 'DM Sans',sans-serif;color:rgba(29,63,122,.65)">Licença, ledger e rails para lançar rápido.</span></span>
+</a>
+<a href="#" onClick="{{ navBancos }}" style="display:flex;gap:14px;align-items:flex-start;padding:16px;border-radius:14px;text-decoration:none;transition:background .18s" style-hover="background:#ECECEA">
+<span style="flex:none;width:40px;height:40px;border-radius:12px;background:#ECECEA;display:flex;align-items:center;justify-content:center"><span style="width:14px;height:14px;border:2px solid #1D3F7A;transform:rotate(45deg);display:block"></span></span>
+<span style="display:block"><span style="display:block;font:600 15px/1.3 Figtree,sans-serif;color:#1D3F7A">Para Subadquirentes e Facilitadores</span><span style="display:block;margin-top:5px;font:400 13.5px/1.45 'DM Sans',sans-serif;color:rgba(29,63,122,.65)">Captura, split e liquidação sob a sua marca.</span></span>
+</a>
+<a href="#" onClick="{{ navBancos }}" style="display:flex;gap:14px;align-items:flex-start;padding:16px;border-radius:14px;text-decoration:none;transition:background .18s" style-hover="background:#ECECEA">
+<span style="flex:none;width:40px;height:40px;border-radius:12px;background:#ECECEA;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px"><span style="width:18px;height:2px;background:#1D3F7A;display:block"></span><span style="width:12px;height:2px;background:#1D3F7A;display:block"></span><span style="width:15px;height:2px;background:#1D3F7A;display:block"></span></span>
+<span style="display:block"><span style="display:block;font:600 15px/1.3 Figtree,sans-serif;color:#1D3F7A">Para Varejo e E-commerce</span><span style="display:block;margin-top:5px;font:400 13.5px/1.45 'DM Sans',sans-serif;color:rgba(29,63,122,.65)">Pagamentos e conta integrados ao checkout.</span></span>
+</a>
+</div>
+</div>
+</div>
+<div style="display:{{ overlayDisplay }};position:absolute;top:100%;left:0;right:0;height:calc(100vh - {{ hHeight }});z-index:50;background:#fff;flex-direction:column;border-top:1px solid rgba(29,63,122,.08)">
+<div style="flex:1;overflow:auto;padding:8px 20px 28px">
+<button onClick="{{ toggleAccProdutos }}" style="width:100%;border:0;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:18px 2px;font:600 17px/1 Figtree,sans-serif;color:#1D3F7A;border-bottom:1px solid rgba(29,63,122,.08)">Produtos<span style="width:8px;height:8px;border-right:1.8px solid #F0743A;border-bottom:1.8px solid #F0743A;transform:{{ accProdutosCaret }};transition:transform .2s;display:block"></span></button>
+<div style="display:{{ accProdutos }};flex-direction:column;padding:6px 0 10px">
+<a href="#" onClick="{{ navBaas }}" style="display:flex;gap:12px;align-items:flex-start;padding:14px 4px;text-decoration:none">
+<span style="flex:none;width:36px;height:36px;border-radius:11px;background:rgba(240,116,58,.1);display:flex;align-items:center;justify-content:center"><span style="width:15px;height:15px;border:2px solid #F0743A;border-radius:5px;display:block"></span></span>
+<span style="display:block"><span style="display:block;font:600 15px/1.3 Figtree,sans-serif;color:#1D3F7A">BaaS e Core Bancário</span><span style="display:block;margin-top:4px;font:400 13.5px/1.4 'DM Sans',sans-serif;color:rgba(29,63,122,.65)">Conta digital, ledger próprio e APIs.</span></span>
+</a>
+<a href="#" onClick="{{ navDashboard }}" style="display:flex;gap:12px;align-items:flex-start;padding:14px 4px;text-decoration:none">
+<span style="flex:none;width:36px;height:36px;border-radius:11px;background:rgba(240,116,58,.1);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px"><span style="width:16px;height:2px;background:#F0743A;display:block"></span><span style="width:11px;height:2px;background:#F0743A;display:block"></span><span style="width:14px;height:2px;background:#F0743A;display:block"></span></span>
+<span style="display:block"><span style="display:block;font:600 15px/1.3 Figtree,sans-serif;color:#1D3F7A">Dashboard de Gestão</span><span style="display:block;margin-top:4px;font:400 13.5px/1.4 'DM Sans',sans-serif;color:rgba(29,63,122,.65)">Saldos, transações e conciliação em tempo real.</span></span>
+</a>
+<a href="#" onClick="{{ navTrilhos }}" style="display:flex;gap:12px;align-items:flex-start;padding:14px 4px;text-decoration:none">
+<span style="flex:none;width:36px;height:36px;border-radius:11px;background:rgba(240,116,58,.1);display:flex;align-items:flex-end;justify-content:center;gap:3px;padding-bottom:12px"><span style="width:4px;height:6px;background:#F0743A;display:block"></span><span style="width:4px;height:10px;background:#F0743A;display:block"></span><span style="width:4px;height:14px;background:#F0743A;display:block"></span></span>
+<span style="display:block"><span style="display:block;font:600 15px/1.3 Figtree,sans-serif;color:#1D3F7A">Trilhos de Pagamento</span><span style="display:block;margin-top:4px;font:400 13.5px/1.4 'DM Sans',sans-serif;color:rgba(29,63,122,.65)">PIX, cartão, boleto e split.</span></span>
+</a>
+<a href="#" onClick="{{ navCartoes }}" style="display:flex;gap:12px;align-items:flex-start;padding:14px 4px;text-decoration:none">
+<span style="flex:none;width:36px;height:36px;border-radius:11px;background:rgba(240,116,58,.1);display:flex;align-items:center;justify-content:center"><span style="width:17px;height:12px;border:2px solid #F0743A;border-radius:3px;display:block"></span></span>
+<span style="display:block"><span style="display:block;font:600 15px/1.3 Figtree,sans-serif;color:#1D3F7A">Integração de Cartões</span><span style="display:block;margin-top:4px;font:400 13.5px/1.4 'DM Sans',sans-serif;color:rgba(29,63,122,.65)">Emissão e processamento de crédito e débito.</span></span>
+</a>
+<a href="#" onClick="{{ navWhitelabel }}" style="display:flex;gap:12px;align-items:flex-start;padding:14px 4px;text-decoration:none">
+<span style="flex:none;width:36px;height:36px;border-radius:11px;background:rgba(240,116,58,.1);display:flex;align-items:center;justify-content:center"><span style="width:13px;height:13px;border:2px solid #F0743A;transform:rotate(45deg);display:block"></span></span>
+<span style="display:block"><span style="display:block;font:600 15px/1.3 Figtree,sans-serif;color:#1D3F7A">White Label</span><span style="display:block;margin-top:4px;font:400 13.5px/1.4 'DM Sans',sans-serif;color:rgba(29,63,122,.65)">Sua marca, nossa tecnologia.</span></span>
+</a>
+<a href="#" onClick="{{ navInvestimentos }}" style="display:flex;gap:12px;align-items:flex-start;padding:14px 4px;text-decoration:none">
+<span style="flex:none;width:36px;height:36px;border-radius:11px;background:rgba(240,116,58,.1);display:flex;align-items:flex-end;justify-content:center;gap:3px;padding-bottom:12px"><span style="width:4px;height:8px;background:#F0743A;display:block"></span><span style="width:4px;height:14px;background:#F0743A;display:block"></span></span>
+<span style="display:block"><span style="display:block;font:600 15px/1.3 Figtree,sans-serif;color:#1D3F7A">Investimentos</span><span style="display:block;margin-top:4px;font:400 13.5px/1.4 'DM Sans',sans-serif;color:rgba(29,63,122,.65)">Produtos de investimento dentro da conta.</span></span>
+</a>
+<a href="#" onClick="{{ navConvenios }}" style="display:flex;gap:12px;align-items:flex-start;padding:14px 4px;text-decoration:none">
+<span style="flex:none;width:36px;height:36px;border-radius:11px;background:rgba(240,116,58,.1);display:flex;align-items:center;justify-content:center;gap:4px"><span style="width:9px;height:9px;border:2px solid #F0743A;border-radius:50%;display:block"></span><span style="width:9px;height:9px;border:2px solid #F0743A;border-radius:50%;display:block"></span></span>
+<span style="display:block"><span style="display:block;font:600 15px/1.3 Figtree,sans-serif;color:#1D3F7A">Convênios</span><span style="display:block;margin-top:4px;font:400 13.5px/1.4 'DM Sans',sans-serif;color:rgba(29,63,122,.65)">Arranjos entre instituições com regra própria.</span></span>
+</a>
+<a href="#" onClick="{{ navCobranca }}" style="display:flex;gap:12px;align-items:flex-start;padding:14px 4px;text-decoration:none">
+<span style="flex:none;width:36px;height:36px;border-radius:11px;background:rgba(240,116,58,.1);display:flex;align-items:center;justify-content:center;gap:2px"><span style="width:2px;height:14px;background:#F0743A;display:block"></span><span style="width:3px;height:14px;background:#F0743A;display:block"></span><span style="width:2px;height:14px;background:#F0743A;display:block"></span><span style="width:4px;height:14px;background:#F0743A;display:block"></span></span>
+<span style="display:block"><span style="display:block;font:600 15px/1.3 Figtree,sans-serif;color:#1D3F7A">Cobrança</span><span style="display:block;margin-top:4px;font:400 13.5px/1.4 'DM Sans',sans-serif;color:rgba(29,63,122,.65)">Boletos, carnês e recorrência em um painel.</span></span>
+</a>
+<a href="#" onClick="{{ navSeguranca }}" style="display:flex;gap:12px;align-items:flex-start;padding:14px 4px;text-decoration:none">
+<span style="flex:none;width:36px;height:36px;border-radius:11px;background:rgba(240,116,58,.1);display:flex;align-items:center;justify-content:center"><span style="width:15px;height:15px;border:2px solid #F0743A;border-radius:50%;display:block"></span></span>
+<span style="display:block"><span style="display:block;font:600 15px/1.3 Figtree,sans-serif;color:#1D3F7A">Segurança e Compliance</span><span style="display:block;margin-top:4px;font:400 13.5px/1.4 'DM Sans',sans-serif;color:rgba(29,63,122,.65)">Biometria, criptografia e monitoramento.</span></span>
+</a>
+<a href="#" onClick="{{ navAntifraude }}" style="display:flex;gap:12px;align-items:flex-start;padding:14px 4px;text-decoration:none">
+<span style="flex:none;width:36px;height:36px;border-radius:11px;background:rgba(240,116,58,.1);display:flex;align-items:center;justify-content:center"><span style="width:14px;height:14px;border:2px solid #F0743A;transform:rotate(45deg);display:block"></span></span>
+<span style="display:block"><span style="display:block;font:600 15px/1.3 Figtree,sans-serif;color:#1D3F7A">Antifraude e PLD</span><span style="display:block;margin-top:4px;font:400 13.5px/1.4 'DM Sans',sans-serif;color:rgba(29,63,122,.65)">Scoring em tempo real, KYC contínuo e bloqueio.</span></span>
+</a>
+<a href="#" onClick="{{ navRegulatorio }}" style="display:flex;gap:12px;align-items:flex-start;padding:14px 4px;text-decoration:none">
+<span style="flex:none;width:36px;height:36px;border-radius:11px;background:rgba(240,116,58,.1);display:flex;align-items:center;justify-content:center"><span style="width:12px;height:16px;border:2px solid #F0743A;border-radius:3px;display:block"></span></span>
+<span style="display:block"><span style="display:block;font:600 15px/1.3 Figtree,sans-serif;color:#1D3F7A">Regulatório</span><span style="display:block;margin-top:4px;font:400 13.5px/1.4 'DM Sans',sans-serif;color:rgba(29,63,122,.65)">CADOCs, COSIF, FGC, e-Financeira e mais.</span></span>
+</a>
+<a href="#" onClick="{{ navSandbox }}" style="display:flex;gap:12px;align-items:flex-start;padding:14px 4px;text-decoration:none">
+<span style="flex:none;width:36px;height:36px;border-radius:11px;background:rgba(240,116,58,.1);display:flex;align-items:center;justify-content:center"><span style="width:15px;height:15px;border:2px dashed #F0743A;border-radius:5px;display:block"></span></span>
+<span style="display:block"><span style="display:block;font:600 15px/1.3 Figtree,sans-serif;color:#1D3F7A">Sandbox para Testes</span><span style="display:block;margin-top:4px;font:400 13.5px/1.4 'DM Sans',sans-serif;color:rgba(29,63,122,.65)">Ambiente gratuito, sem cartão de crédito.</span></span>
+</a>
+</div>
+<button onClick="{{ toggleAccSolucoes }}" style="width:100%;border:0;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:18px 2px;font:600 17px/1 Figtree,sans-serif;color:#1D3F7A;border-bottom:1px solid rgba(29,63,122,.08)">Soluções<span style="width:8px;height:8px;border-right:1.8px solid #F0743A;border-bottom:1.8px solid #F0743A;transform:{{ accSolucoesCaret }};transition:transform .2s;display:block"></span></button>
+<div style="display:{{ accSolucoes }};flex-direction:column;padding:6px 0 10px">
+<a href="#" onClick="{{ navBancos }}" style="display:flex;gap:12px;align-items:flex-start;padding:14px 4px;text-decoration:none">
+<span style="flex:none;width:36px;height:36px;border-radius:11px;background:#ECECEA;display:flex;align-items:center;justify-content:center"><span style="width:15px;height:15px;border:2px solid #1D3F7A;border-radius:5px;display:block"></span></span>
+<span style="display:block"><span style="display:block;font:600 15px/1.3 Figtree,sans-serif;color:#1D3F7A">Para Bancos</span><span style="display:block;margin-top:4px;font:400 13.5px/1.4 'DM Sans',sans-serif;color:rgba(29,63,122,.65)">Evoluir sem recomeçar do zero.</span></span>
+</a>
+<a href="#" onClick="{{ navBancos }}" style="display:flex;gap:12px;align-items:flex-start;padding:14px 4px;text-decoration:none">
+<span style="flex:none;width:36px;height:36px;border-radius:11px;background:#ECECEA;display:flex;align-items:center;justify-content:center"><span style="width:15px;height:15px;border:2px solid #1D3F7A;border-radius:50%;display:block"></span></span>
+<span style="display:block"><span style="display:block;font:600 15px/1.3 Figtree,sans-serif;color:#1D3F7A">Para Fintechs</span><span style="display:block;margin-top:4px;font:400 13.5px/1.4 'DM Sans',sans-serif;color:rgba(29,63,122,.65)">Licença, ledger e rails para lançar rápido.</span></span>
+</a>
+<a href="#" onClick="{{ navBancos }}" style="display:flex;gap:12px;align-items:flex-start;padding:14px 4px;text-decoration:none">
+<span style="flex:none;width:36px;height:36px;border-radius:11px;background:#ECECEA;display:flex;align-items:center;justify-content:center"><span style="width:13px;height:13px;border:2px solid #1D3F7A;transform:rotate(45deg);display:block"></span></span>
+<span style="display:block"><span style="display:block;font:600 15px/1.3 Figtree,sans-serif;color:#1D3F7A">Para Subadquirentes e Facilitadores</span><span style="display:block;margin-top:4px;font:400 13.5px/1.4 'DM Sans',sans-serif;color:rgba(29,63,122,.65)">Captura, split e liquidação.</span></span>
+</a>
+<a href="#" onClick="{{ navBancos }}" style="display:flex;gap:12px;align-items:flex-start;padding:14px 4px;text-decoration:none">
+<span style="flex:none;width:36px;height:36px;border-radius:11px;background:#ECECEA;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px"><span style="width:16px;height:2px;background:#1D3F7A;display:block"></span><span style="width:11px;height:2px;background:#1D3F7A;display:block"></span><span style="width:14px;height:2px;background:#1D3F7A;display:block"></span></span>
+<span style="display:block"><span style="display:block;font:600 15px/1.3 Figtree,sans-serif;color:#1D3F7A">Para Varejo e E-commerce</span><span style="display:block;margin-top:4px;font:400 13.5px/1.4 'DM Sans',sans-serif;color:rgba(29,63,122,.65)">Pagamentos integrados ao checkout.</span></span>
+</a>
+</div>
+<a href="#" onClick="{{ navQuemSomos }}" style="display:block;padding:18px 2px;font:600 17px/1 Figtree,sans-serif;color:#1D3F7A;text-decoration:none;border-bottom:1px solid rgba(29,63,122,.08)">Quem Somos</a>
+<a href="#" onClick="{{ navCases }}" style="display:block;padding:18px 2px;font:600 17px/1 Figtree,sans-serif;color:#1D3F7A;text-decoration:none;border-bottom:1px solid rgba(29,63,122,.08)">Cases</a>
+<a href="#" onClick="{{ navContato }}" style="display:block;margin-top:22px;text-align:center;background:#F0743A;color:#fff;font:600 15px/1 'DM Sans',sans-serif;text-decoration:none;padding:16px 18px;border-radius:12px">Fale com um especialista</a>
+</div>
+</div>
+</header>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:420}}">
+class Component extends DCLogic {
+  state = { mega: null, open: false, acc: null, scrolled: false };
+
+  componentDidMount() {
+    this._onScroll = () => {
+      const node = this._root || (this._root = document.querySelector("header"));
+      const y = window.scrollY || document.documentElement.scrollTop || 0;
+      const scrolled = y > 8;
+      if (scrolled === this.state.scrolled) return;
+      this.setState({ scrolled });
+    };
+    window.addEventListener("scroll", this._onScroll, { passive: true });
+    this._onScroll();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this._onScroll);
+  }
+
+  nav(fn) {
+    return e => {
+      if (e && e.preventDefault) e.preventDefault();
+      this.setState({ mega: null, open: false, acc: null });
+      if (typeof fn === "function") fn(e);
+    };
+  }
+
+  renderVals() {
+    const { mega, open, acc, scrolled } = this.state;
+    const p = this.props;
+    const n = p.nav || {};
+    return {
+      navBaas: this.nav(n.baas),
+      navDashboard: this.nav(n.dashboard),
+      navTrilhos: this.nav(n.trilhos),
+      navCartoes: this.nav(n.cartoes),
+      navInvestimentos: this.nav(n.investimentos),
+      navConvenios: this.nav(n.convenios),
+      navCobranca: this.nav(n.cobranca),
+      navWhitelabel: this.nav(n.whitelabel),
+      navSeguranca: this.nav(n.seguranca),
+      navAntifraude: this.nav(n.antifraude),
+      navRegulatorio: this.nav(n.regulatorio),
+      navSandbox: this.nav(n.sandbox),
+      hShadow: scrolled ? "0 10px 30px rgba(18,39,77,.08)" : "none",
+      openProdutos: () => this.setState({ mega: "produtos" }),
+      openSolucoes: () => this.setState({ mega: "solucoes" }),
+      closeMega: () => this.setState({ mega: null }),
+      toggleProdutos: () => this.setState(s => ({ mega: s.mega === "produtos" ? null : "produtos" })),
+      toggleSolucoes: () => this.setState(s => ({ mega: s.mega === "solucoes" ? null : "solucoes" })),
+      megaDisplay: mega ? "block" : "none",
+      dMegaProdutos: mega === "produtos" ? "grid" : "none",
+      dMegaSolucoes: mega === "solucoes" ? "grid" : "none",
+      bgProdutos: mega === "produtos" ? "#ECECEA" : "transparent",
+      bgSolucoes: mega === "solucoes" ? "#ECECEA" : "transparent",
+      caretProdutos: mega === "produtos" ? "rotate(-135deg)" : "rotate(45deg)",
+      caretSolucoes: mega === "solucoes" ? "rotate(-135deg)" : "rotate(45deg)",
+      toggleOverlay: () => this.setState(s => ({ open: !s.open, mega: null, acc: s.open ? null : s.acc })),
+      closeOverlay: () => this.setState({ open: false, acc: null }),
+      overlayDisplay: open ? "flex" : "none",
+      burgerBg: open ? "#ECECEA" : "#fff",
+      burgerTop: open ? "translateY(5.6px) rotate(45deg)" : "none",
+      burgerBottom: open ? "translateY(-5.6px) rotate(-45deg)" : "none",
+      burgerMidOpacity: open ? 0 : 1,
+      toggleAccProdutos: () => this.setState(s => ({ acc: s.acc === "produtos" ? null : "produtos" })),
+      toggleAccSolucoes: () => this.setState(s => ({ acc: s.acc === "solucoes" ? null : "solucoes" })),
+      accProdutos: acc === "produtos" ? "flex" : "none",
+      accSolucoes: acc === "solucoes" ? "flex" : "none",
+      accProdutosCaret: acc === "produtos" ? "rotate(-135deg)" : "rotate(45deg)",
+      accSolucoesCaret: acc === "solucoes" ? "rotate(-135deg)" : "rotate(45deg)",
+      goHome: this.nav(p.goHome),
+      navProdutos: this.nav(p.goProdutos),
+      navBancos: this.nav(p.goBancos),
+      navQuemSomos: this.nav(p.goQuemSomos),
+      navCases: this.nav(p.goCases),
+      navContato: this.nav(p.goContato),
+      hHeight: p.hHeight || "74px",
+      menuDisplay: p.menuDisplay || "flex",
+      burgerDisplay: p.burgerDisplay || "none",
+      ctaDisplay: p.ctaDisplay || "inline-block"
+    };
+  }
+}
+</script>
+</body>
+</html>
