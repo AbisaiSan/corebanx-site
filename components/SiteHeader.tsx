@@ -7,7 +7,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { Icon } from './Icons';
 import s from './SiteHeader.module.css';
 import { common } from '@/lib/copy/common';
-import { href, PATHS, type Lang } from '@/lib/i18n';
+import { href, LANG_LABEL, LANG_TAG, LANGS, PATHS, stripLang, type Lang } from '@/lib/i18n';
 import { getGroup, getProduct, type GroupId } from '@/lib/products';
 
 type Mega = 'produtos' | 'solucoes' | null;
@@ -119,26 +119,26 @@ export default function SiteHeader({ lang }: { lang: Lang }) {
     );
   };
 
-  const langSwitch = () => (
-    <div className={s.langs}>
-      <Link
-        href={href('pt', pathname.replace(/^\/en/, '') || '/')}
-        className={`${s.lang} ${lang === 'pt' ? s.langOn : ''}`}
-        hrefLang="pt-BR"
-        aria-current={lang === 'pt' ? 'true' : undefined}
-      >
-        PT
-      </Link>
-      <Link
-        href={href('en', pathname.replace(/^\/en/, '') || '/')}
-        className={`${s.lang} ${lang === 'en' ? s.langOn : ''}`}
-        hrefLang="en"
-        aria-current={lang === 'en' ? 'true' : undefined}
-      >
-        EN
-      </Link>
-    </div>
-  );
+  // The switch keeps the reader on the same page, so it works off the current
+  // path with its locale prefix removed.
+  const langSwitch = () => {
+    const shared = stripLang(pathname);
+    return (
+      <div className={s.langs}>
+        {LANGS.map((code) => (
+          <Link
+            key={code}
+            href={href(code, shared)}
+            className={`${s.lang} ${lang === code ? s.langOn : ''}`}
+            hrefLang={LANG_TAG[code]}
+            aria-current={lang === code ? 'true' : undefined}
+          >
+            {LANG_LABEL[code]}
+          </Link>
+        ))}
+      </div>
+    );
+  };
 
   return (
     <header

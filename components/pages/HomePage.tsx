@@ -7,7 +7,7 @@ import { CheckListLight, CtaBand, DashList, Section, Split, Wrap } from '../ui';
 import { common } from '@/lib/copy/common';
 import { home } from '@/lib/copy/home';
 import { illustrations } from '@/lib/copy/illustrations';
-import { href, PATHS, type Lang } from '@/lib/i18n';
+import { href, LANG_LOCALE, PATHS, type Lang } from '@/lib/i18n';
 import { getGroup, HOME_GROUP_ORDER } from '@/lib/products';
 
 const mono = (size: number, color: string, weight = 400, lh = 1): CSSProperties => ({
@@ -257,7 +257,7 @@ export default function HomePage({ lang }: { lang: Lang }) {
   const c = common[lang];
   const t = home[lang];
   const to = (path: string) => href(lang, path);
-  const locale = lang === 'pt' ? 'pt-BR' : 'en-US';
+  const locale = LANG_LOCALE[lang];
 
   return (
     <>

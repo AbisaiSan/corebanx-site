@@ -65,7 +65,37 @@ const en: typeof pt = {
   },
 };
 
-export const seo = { pt, en };
+const es: typeof pt = {
+  home: {
+    title: 'Corebanx — Infraestructura financiera completa',
+    description:
+      'BaaS, core bancario, medios de pago y adquirencia en una sola plataforma para bancos, fintechs, subadquirentes y retail.',
+  },
+  produtos: {
+    title: 'Productos y Soluciones',
+    description:
+      'Del core bancario a la adquirencia: núcleo bancario, rieles de pago, soluciones financieras avanzadas, white label y seguridad.',
+  },
+  bancos: {
+    title: 'Para Bancos',
+    description:
+      'Conecta nuevos productos al core que ya existe, al ritmo de tu roadmap y bajo las reglas del regulador.',
+  },
+  quemSomos: {
+    title: 'Quiénes Somos',
+    description: 'Una infratech construida por quienes operan sistemas financieros.',
+  },
+  cases: {
+    title: 'Casos y Socios',
+    description: 'Resultados construidos junto a nuestros socios.',
+  },
+  contato: {
+    title: 'Contacto',
+    description: 'Habla con un especialista Corebanx. Respondemos en un día hábil.',
+  },
+};
+
+export const seo = { pt, en, es };
 
 export function metaFor(lang: Lang, key: keyof typeof pt): Meta {
   return seo[lang][key];

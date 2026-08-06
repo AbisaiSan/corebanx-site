@@ -154,4 +154,82 @@ const en: typeof pt = {
   },
 };
 
-export const home = { pt, en };
+const es: typeof pt = {
+  hero: {
+    eyebrow: 'Infratech B2B2C',
+    title: 'Infraestructura financiera completa para quienes construyen el banco del futuro',
+    lead: 'BaaS, core bancario, medios de pago y adquirencia en una sola plataforma, para que lances productos financieros con la agilidad que tu negocio exige.',
+    chips: ['API REST', 'ISO 20022', 'PIX · Transferencia · Tarjeta', 'Cloud nativo'],
+  },
+  partners: {
+    title: 'Socios que confían en Corebanx',
+    logo: 'logo del socio',
+  },
+  beforeAfter: {
+    eyebrow: 'Antes y después',
+    title: 'Qué cambia cuando la infraestructura deja de ser un problema',
+    withoutTitle: 'Sin Corebanx',
+    without: [
+      'Sistemas fragmentados y datos dispersos',
+      'Integraciones que tardan meses en llegar a producción',
+      'Dependencia de múltiples proveedores y contratos',
+      'Compliance manual, expuesto al error humano',
+    ],
+    withTitle: 'Con Corebanx',
+    with: [
+      'Una sola infraestructura conectada',
+      'Integración vía API REST documentada',
+      'Conformidad incorporada al flujo',
+      'Escala bajo demanda, sin reescribir el core',
+    ],
+  },
+  products: {
+    eyebrow: 'Productos',
+    title: 'Cinco grupos de solución, una sola plataforma',
+  },
+  whiteLabel: {
+    eyebrow: 'White Label',
+    title: 'Cómo funciona el modelo',
+    steps: [
+      ['Branding', 'App e internet banking con la identidad de tu institución.'],
+      ['Tecnología', 'Core bancario, ledger y APIs listos para producción.'],
+      ['Seguridad', 'Biometría, cifrado y trazas de auditoría integradas.'],
+      ['Adquirencia', 'Captura, liquidación y split bajo tu marca.'],
+    ],
+  },
+  stats: [
+    ['16,7K', 'TPS comprobado'],
+    ['7', 'Rieles de pago'],
+    ['11', 'Motores de ledger'],
+    ['19', 'Mensajes ISO 20022'],
+    ['99,99%', 'Uptime SLA'],
+  ],
+  security: {
+    eyebrow: 'Seguridad y compliance',
+    title: 'Protección en cada capa de la operación',
+    text: 'Infraestructura en la nube, datos cifrados, antifraude de transacciones en tiempo real, PLD con KYC continuo y cobertura regulatoria completa. La seguridad no es un módulo extra: es parte del flujo.',
+    seal: 'Sello · certificación',
+    cards: [
+      ['Infraestructura en la nube', 'Alta disponibilidad y redundancia geográfica.'],
+      ['Biometría', 'Autenticación fuerte en el onboarding y en las transacciones.'],
+      ['Cifrado de datos', 'En tránsito y en reposo, con gestión de llaves.'],
+      ['Monitoreo continuo', 'Detección de anomalías y respuesta a incidentes.'],
+      ['Antifraude de transacciones', 'Scoring de riesgo en tiempo real y bloqueo automático.'],
+      ['PLD y KYC continuo', 'Transacciones atípicas monitoreadas y reportes regulatorios.'],
+      ['Cobertura regulatoria', 'CADOCs al BACEN, COSIF, FGC, e-Financeira y más.'],
+    ],
+  },
+  testimonial: {
+    photo: 'foto del socio',
+    quote:
+      '“Placeholder editable: testimonio de un socio sobre el tiempo de implementación y la ganancia operativa con Corebanx.”',
+    name: 'Nombre del socio',
+    role: 'Cargo · Institución',
+  },
+  cta: {
+    title: '¿Listo para modernizar tu operación financiera?',
+    text: 'Habla con nuestro equipo. En una conversación mapeamos tu operación y el camino de integración.',
+  },
+};
+
+export const home = { pt, en, es };

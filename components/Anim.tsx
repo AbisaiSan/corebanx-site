@@ -86,9 +86,11 @@ export function Counter({ value, locale = 'pt-BR' }: { value: string; locale?: s
     if (!match) return;
 
     const numStr = match[0];
-    const isPt = locale.startsWith('pt');
+    // Portuguese and Spanish author their figures as "16,7K" / "184.320";
+    // English as "16.7K" / "184,320". Parsing has to follow the locale.
+    const commaDecimal = locale.startsWith('pt') || locale.startsWith('es');
     const target = parseFloat(
-      isPt ? numStr.replace(/\./g, '').replace(',', '.') : numStr.replace(/,/g, ''),
+      commaDecimal ? numStr.replace(/\./g, '').replace(',', '.') : numStr.replace(/,/g, ''),
     );
     if (!isFinite(target)) return;
 
@@ -98,7 +100,7 @@ export function Counter({ value, locale = 'pt-BR' }: { value: string; locale?: s
     }
 
     // whole numbers ("7", "38 ms") have no fractional part to read
-    const decimals = ((isPt ? numStr.split(',')[1] : numStr.split('.')[1]) || '').length;
+    const decimals = ((commaDecimal ? numStr.split(',')[1] : numStr.split('.')[1]) || '').length;
     const format = (v: number) =>
       v.toLocaleString(locale, {
         minimumFractionDigits: decimals,

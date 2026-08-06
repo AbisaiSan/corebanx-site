@@ -3,7 +3,7 @@ import type { CSSProperties, ReactNode } from 'react';
 import { Counter } from './Anim';
 import { Layered } from './ui';
 import { illustrations } from '@/lib/copy/illustrations';
-import type { Lang } from '@/lib/i18n';
+import { LANG_LOCALE, type Lang } from '@/lib/i18n';
 import type { IllustrationKey } from '@/lib/products';
 
 /* The illustrated card that sits beside every product's copy — recreated
@@ -70,7 +70,7 @@ export default function ProductIllustration({
   lang: Lang;
 }) {
   const t = illustrations[lang];
-  const locale = lang === 'pt' ? 'pt-BR' : 'en-US';
+  const locale = LANG_LOCALE[lang];
 
   switch (kind) {
     /* -------------------------------------------------------------- BaaS */

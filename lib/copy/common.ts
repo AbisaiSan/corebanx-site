@@ -129,5 +129,71 @@ const en: typeof pt = {
   },
 };
 
-export const common = { pt, en };
+const es: typeof pt = {
+  brand: 'Corebanx',
+  nav: {
+    produtos: 'Productos',
+    solucoes: 'Soluciones',
+    quemSomos: 'Quiénes Somos',
+    cases: 'Casos',
+    contato: 'Contacto',
+    openMenu: 'Abrir menú',
+    closeMenu: 'Cerrar menú',
+    skipToContent: 'Ir al contenido',
+  },
+  cta: {
+    especialista: 'Habla con un especialista',
+    solucoes: 'Conoce nuestras soluciones',
+    nossoTime: 'Habla con nuestro equipo',
+    esteProduto: 'Habla sobre este producto',
+    verProdutos: 'Ver productos',
+    todosProdutos: 'Ver todos los productos →',
+    saibaMais: 'Conoce más →',
+    contato: 'Contáctanos',
+    voltarProdutos: '← Productos y Soluciones',
+  },
+  segments: [
+    { label: 'Para Bancos', desc: 'Nuevos productos sobre el core que ya existe.' },
+    { label: 'Para Fintechs', desc: 'Licencia, ledger y rieles para lanzar rápido.' },
+    {
+      label: 'Para Subadquirentes y Facilitadores',
+      desc: 'Captura, split y liquidación bajo tu marca.',
+    },
+    { label: 'Para Retail y E-commerce', desc: 'Pagos y cuenta integrados al checkout.' },
+  ],
+  footer: {
+    tagline: 'Infraestructura financiera para bancos, fintechs, subadquirentes y retail.',
+    produtos: 'Productos',
+    solucoes: 'Soluciones',
+    empresa: 'Empresa',
+    contato: 'Contacto',
+    produtoLinks: [
+      { label: 'BaaS y Core Bancario', path: PATHS.produto('baas-core-bancario') },
+      { label: 'Medios de Pago', path: PATHS.produto('trilhos-de-pagamento') },
+      { label: 'Adquirencia', path: PATHS.produto('integracao-de-cartoes') },
+      { label: 'White Label', path: PATHS.produto('white-label') },
+      { label: 'Seguridad y Compliance', path: PATHS.produto('seguranca-e-compliance') },
+    ],
+    solucaoLinks: [
+      'Para Bancos',
+      'Para Fintechs',
+      'Para Subadquirentes',
+      'Para Retail y E-commerce',
+    ],
+    empresaLinks: [
+      { label: 'Quiénes Somos', path: PATHS.quemSomos },
+      { label: 'Casos y Socios', path: PATHS.cases },
+      { label: 'Trabaja con nosotros', path: null },
+      { label: 'Centro de privacidad', path: null },
+    ],
+    email: 'comercial@corebanx.com.br',
+    phone: '+55 11 0000-0000',
+    address: ['Av. Placeholder, 1000', 'São Paulo, SP'],
+    rights: '© 2026 Corebanx. Todos los derechos reservados.',
+    terms: 'Términos de uso',
+    privacy: 'Política de privacidad',
+  },
+};
+
+export const common = { pt, en, es };
 export type CommonCopy = typeof pt;

@@ -307,4 +307,174 @@ const en: typeof pt = {
   },
 };
 
-export const pages = { pt, en };
+const es: typeof pt = {
+  produtos: {
+    eyebrow: 'Productos y soluciones',
+    title: 'Una infraestructura, todas las soluciones financieras que tu negocio necesita',
+    lead: 'Del core bancario a la adquirencia, cada capa funciona aislada o integrada. Tú eliges por dónde empezar.',
+    ctaTitle: '¿No sabes por dónde empezar?',
+    ctaText:
+      'Nuestro equipo diseña el plan técnico junto al tuyo, a partir de lo que ya existe en tu operación.',
+  },
+  bancos: {
+    eyebrow: 'Soluciones · Para bancos',
+    title: 'Bancos que evolucionan sin empezar de cero',
+    lead: 'Conecta nuevos productos al core que ya existe, al ritmo de tu roadmap y bajo las reglas del regulador.',
+    contextEyebrow: 'Contexto de mercado',
+    contextTitle: 'La presión viene de afuera, pero el cuello de botella es interno',
+    context: [
+      [
+        'Nuevos entrantes, las mismas licencias',
+        'Las fintechs lanzan en semanas lo que en el banco toma trimestres.',
+      ],
+      ['Legado difícil de tocar', 'Cada cambio en el core carga un alto riesgo operativo.'],
+      ['Exigencia regulatoria creciente', 'Reportes y controles consumen al equipo de tecnología.'],
+    ],
+    beforeTitle: 'Antes y después, en la operación del banco',
+    todayTitle: 'Hoy',
+    today: [
+      'Proyectos de producto detenidos en la fila del core',
+      'Conciliación en hojas de cálculo entre proveedores',
+      'Cada nuevo riel exige un proyecto propio',
+    ],
+    withTitle: 'Con Corebanx',
+    with: [
+      'Nuevos productos publicados sobre el core actual',
+      'Conciliación automática en un solo estado de cuenta',
+      'Rieles nuevos activados por configuración',
+    ],
+    useCasesEyebrow: 'Casos de uso',
+    useCasesTitle: 'Por dónde empiezan los bancos',
+    tabs: [
+      {
+        label: 'Cuenta digital white label',
+        title: 'Cuenta digital white label',
+        text: 'Lanza una cuenta completa con la marca del banco, sin tocar el sistema legado.',
+        checks: [
+          'Onboarding digital con biometría',
+          'Apps iOS y Android publicadas bajo tu marca',
+          'PIX, tarjeta y boleto desde el primer día',
+        ],
+      },
+      {
+        label: 'Adquirencia propia',
+        title: 'Adquirencia propia',
+        text: 'Captura y liquida transacciones de tu propio portafolio de comercios.',
+        checks: [
+          'Terminales y gateway bajo tu marca',
+          'Split y adelanto configurables',
+          'Ingresos de adquirencia dentro de casa',
+        ],
+      },
+      {
+        label: 'Modernización de rieles',
+        title: 'Modernización de rieles',
+        text: 'Cambia integraciones punto a punto por una sola capa de mensajería.',
+        checks: [
+          'Mensajería ISO 20022 estandarizada',
+          'Conciliación y reprocesamiento automáticos',
+          'Observabilidad de las transacciones de punta a punta',
+        ],
+      },
+    ],
+    volumeLabel: 'VOLUMEN CAPTURADO',
+    isoMessages: [
+      'pacs.008 · credit transfer',
+      'pacs.002 · status report',
+      'camt.054 · notification',
+      'camt.053 · statement',
+    ],
+    trustTitle: 'Por qué las instituciones reguladas eligen Corebanx',
+    trust: [
+      ['Regulatorio', 'Procesos y reportes diseñados para el entorno supervisado.'],
+      ['Seguridad', 'Cifrado, biometría y trazas de auditoría por defecto.'],
+      ['Escala', '16,7K TPS comprobados y uptime de 99,99% en SLA.'],
+      ['Soporte', 'Equipo técnico dedicado desde la integración hasta el go-live.'],
+    ],
+    proofTitle: 'Instituciones financieras que operan con Corebanx',
+    proofLogo: 'logo de la institución',
+    ctaTitle: 'Habla con nuestro equipo sobre tu operación',
+    ctaText:
+      'Traemos a un especialista que ya implementó infraestructura en instituciones reguladas.',
+  },
+  quemSomos: {
+    eyebrow: 'Quiénes somos',
+    title: 'Una infratech construida por quienes operan sistemas financieros',
+    lead: 'Nacimos para resolver lo que traba la innovación dentro de las instituciones: la infraestructura.',
+    timelineEyebrow: 'Línea de tiempo',
+    timeline: [
+      ['2021', 'Fundación', 'Corebanx nace con foco en core bancario como servicio.'],
+      [
+        '2022',
+        'Primeras integraciones',
+        'Cuenta digital y PIX en producción con los primeros socios.',
+      ],
+      ['2023', 'Capa de pagos', 'Unificación de los rieles y lanzamiento del split de pago.'],
+      [
+        '2024',
+        'Adquirencia y white label',
+        'Plataforma completa disponible bajo la marca del socio.',
+      ],
+      ['2025', 'Escala comprobada', '16,7K TPS y mensajería ISO 20022 en operación.'],
+    ],
+    missionEyebrow: 'Misión',
+    missionTitle:
+      'Convertir la infraestructura financiera en un detalle resuelto para quien quiere innovar.',
+    values: [
+      ['Solidez', 'Que el sistema esté en el aire es lo mínimo, no el diferencial.'],
+      ['Claridad', 'Documentación y contratos sin letra chica.'],
+      ['Alianza', 'Nuestro equipo entra junto al proyecto del cliente.'],
+      ['Rigor', 'Seguridad y regulación antes que cualquier atajo.'],
+    ],
+    partnersEyebrow: 'Socios estratégicos',
+    partnerLogo: 'logo del socio',
+    closingTitle: 'Conoce la plataforma o habla con nuestro equipo.',
+  },
+  cases: {
+    eyebrow: 'Casos y socios',
+    title: 'Resultados construidos junto a nuestros socios',
+    logo: 'logo',
+    cards: [
+      ['Banco', 'Nombre del cliente', 'Placeholder editable: el resultado obtenido en una frase.'],
+      ['Fintech', 'Nombre del cliente', 'Placeholder editable: el resultado obtenido en una frase.'],
+      [
+        'Subadquirente',
+        'Nombre del cliente',
+        'Placeholder editable: el resultado obtenido en una frase.',
+      ],
+      ['Retail', 'Nombre del cliente', 'Placeholder editable: el resultado obtenido en una frase.'],
+    ],
+  },
+  contato: {
+    eyebrow: 'Contacto',
+    title: 'Habla con un especialista',
+    lead: 'Respondemos en un día hábil.',
+    fields: {
+      nome: 'Nombre completo',
+      nomePh: 'Tu nombre',
+      empresa: 'Empresa',
+      empresaPh: 'Razón social',
+      cargo: 'Cargo',
+      cargoPh: 'Tu función',
+      email: 'Correo corporativo',
+      emailPh: 'nombre@empresa.com',
+      telefone: 'Teléfono',
+      telefonePh: '(00) 00000-0000',
+      segmento: 'Segmento',
+      mensagem: 'Mensaje',
+      mensagemPh: 'Cuéntanos en pocas líneas qué necesitas resolver.',
+    },
+    segments: ['Banco', 'Fintech', 'Subadquirente', 'Otro'],
+    submit: 'Enviar mensaje',
+    sending: 'Enviando…',
+    schedule: 'Agendar una conversación →',
+    sent: 'Mensaje registrado. Nuestro equipo responde en un día hábil.',
+    salesTitle: 'Comercial',
+    hours: 'Atención de lunes a viernes, de 9 a 18 h.',
+    addressTitle: 'Dirección',
+    address: ['Av. Placeholder, 1000 · piso 10', 'São Paulo, SP · 00000-000'],
+    socialTitle: 'Redes',
+  },
+};
+
+export const pages = { pt, en, es };

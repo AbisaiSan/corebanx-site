@@ -40,6 +40,7 @@ export interface Group {
   icon: IconName;
   pt: GroupText;
   en: GroupText;
+  es: GroupText;
 }
 
 export interface Product {
@@ -51,6 +52,7 @@ export interface Product {
   mediaFirst: boolean;
   pt: ProductText;
   en: ProductText;
+  es: ProductText;
 }
 
 export const GROUPS: Group[] = [
@@ -67,6 +69,11 @@ export const GROUPS: Group[] = [
       tagline: 'Digital account, ledger and operational management in one place.',
       homeDesc: 'Digital account, core banking, ledger and management dashboard.',
     },
+    es: {
+      name: 'Núcleo Bancario',
+      tagline: 'Cuenta digital, ledger y gestión de la operación en un solo lugar.',
+      homeDesc: 'Cuenta digital, core bancario, ledger y dashboard de gestión.',
+    },
   },
   {
     id: 'pagamentos',
@@ -80,6 +87,11 @@ export const GROUPS: Group[] = [
       name: 'Payments and Acquiring',
       tagline: 'Every rail and the card programme in the same layer.',
       homeDesc: 'Pix, wires, boleto, QR Code, COMPE and card programme.',
+    },
+    es: {
+      name: 'Medios de Pago y Adquirencia',
+      tagline: 'Todos los rieles y el programa de tarjetas en la misma capa.',
+      homeDesc: 'Pix, transferencias, boleto, QR Code, COMPE y programa de tarjetas.',
     },
   },
   {
@@ -95,6 +107,11 @@ export const GROUPS: Group[] = [
       tagline: "Products that expand the digital account's revenue.",
       homeDesc: 'Investments, agreements and billing in the same account.',
     },
+    es: {
+      name: 'Soluciones Financieras Avanzadas',
+      tagline: 'Productos que amplían los ingresos de la cuenta digital.',
+      homeDesc: 'Inversiones, convenios y cobranza en la misma cuenta.',
+    },
   },
   {
     id: 'whitelabel',
@@ -109,6 +126,11 @@ export const GROUPS: Group[] = [
       tagline: 'The experience is yours; the infrastructure is ours.',
       homeDesc: 'Your brand up front, our technology behind it.',
     },
+    es: {
+      name: 'White Label',
+      tagline: 'La experiencia es tuya; la infraestructura es nuestra.',
+      homeDesc: 'Tu marca al frente, nuestra tecnología por detrás.',
+    },
   },
   {
     id: 'seguranca',
@@ -122,6 +144,11 @@ export const GROUPS: Group[] = [
       name: 'Security, Compliance and Testing',
       tagline: 'From the test environment to regulatory reporting.',
       homeDesc: 'Anti-fraud, AML, regulatory, encryption and sandbox.',
+    },
+    es: {
+      name: 'Seguridad, Compliance y Pruebas',
+      tagline: 'Del ambiente de pruebas al reporte regulatorio.',
+      homeDesc: 'Antifraude, PLD, regulatorio, cifrado y sandbox.',
     },
   },
 ];
@@ -165,6 +192,17 @@ export const PRODUCTS: Product[] = [
         'Global transactions with ISO 20022 messaging',
       ],
     },
+    es: {
+      name: 'BaaS y Core Bancario',
+      desc: 'Cuenta digital, ledger propio y APIs REST.',
+      lead: 'Cuenta digital con funciones bancarias completas, ledger propio y APIs REST para orquestar todo desde tu lado.',
+      checks: [
+        'Cuenta digital con funciones de banco',
+        'Multiplataforma: apps iOS y Android, internet banking, plataforma white label y APIs REST',
+        'Conciliación bancaria automatizada',
+        'Transacciones globales con mensajería ISO 20022',
+      ],
+    },
   },
   {
     slug: 'dashboard-de-gestao',
@@ -192,6 +230,17 @@ export const PRODUCTS: Product[] = [
         'Reconciliation status per rail',
         'Operational indicators and alerts',
         'Access profiles per team',
+      ],
+    },
+    es: {
+      name: 'Dashboard de Gestión',
+      desc: 'Saldos, transacciones y conciliación en tiempo real.',
+      lead: 'Panel único con visión en tiempo real de saldos, transacciones, conciliación e indicadores operativos.',
+      checks: [
+        'Saldos y transacciones en tiempo real',
+        'Estado de conciliación por riel',
+        'Indicadores operativos y alertas',
+        'Perfiles de acceso por equipo',
       ],
     },
   },
@@ -223,6 +272,17 @@ export const PRODUCTS: Product[] = [
         'Unified reconciliation across all methods',
       ],
     },
+    es: {
+      name: 'Rieles de Pago',
+      desc: 'Pix, transferencias, boleto, QR Code y COMPE en una capa.',
+      lead: 'Recibe, liquida y distribuye montos por cualquier medio, con terminales y gateway integrados al mismo estado de cuenta.',
+      checks: [
+        'PIX, transferencias, boleto, tarjeta, QR Code y COMPE, con conectividad a la Cámara de Compensación para la liquidación interbancaria',
+        'Split de pago y cobranza recurrente',
+        'Terminales y gateway bajo tu marca',
+        'Conciliación unificada de todos los medios',
+      ],
+    },
   },
   {
     slug: 'integracao-de-cartoes',
@@ -252,6 +312,17 @@ export const PRODUCTS: Product[] = [
         'Card programme under your brand',
       ],
     },
+    es: {
+      name: 'Integración de Tarjetas',
+      desc: 'Emisión y procesamiento de crédito y débito.',
+      lead: 'Tarjetas de crédito y débito, físicas y virtuales, con gestión completa del programa de tarjetas.',
+      checks: [
+        'Crédito y débito, físico y virtual',
+        'Procesamiento y autorización en tiempo real',
+        'Gestión de límites, estados de cuenta y bloqueos',
+        'Programa de tarjetas bajo tu marca',
+      ],
+    },
   },
   {
     slug: 'investimentos',
@@ -277,6 +348,16 @@ export const PRODUCTS: Product[] = [
         'Invest and redeem without leaving the app',
         'Investment balance on the same statement',
         'A new revenue line for the institution',
+      ],
+    },
+    es: {
+      name: 'Inversiones',
+      desc: 'Productos de inversión dentro de la cuenta digital.',
+      lead: 'Acceso a productos de inversión integrados directamente a la cuenta digital del cliente final.',
+      checks: [
+        'Invierte y rescata sin salir de la app',
+        'Saldo de inversión en el mismo estado de cuenta',
+        'Una nueva línea de ingresos para la institución',
       ],
     },
   },
@@ -306,6 +387,16 @@ export const PRODUCTS: Product[] = [
         'Audit trail for every agreement',
       ],
     },
+    es: {
+      name: 'Convenios',
+      desc: 'Acuerdos entre instituciones con reglas propias.',
+      lead: 'Gestión de convenios y acuerdos entre instituciones, con reglas y conciliación propias.',
+      checks: [
+        'Reglas de reparto y tarifas por convenio',
+        'Conciliación dedicada por participante',
+        'Traza de auditoría de cada acuerdo',
+      ],
+    },
   },
   {
     slug: 'cobranca',
@@ -331,6 +422,16 @@ export const PRODUCTS: Product[] = [
         'Boletos, payment books and recurring billing',
         'Automatic settlement and reconciliation',
         'Configurable dunning schedule',
+      ],
+    },
+    es: {
+      name: 'Cobranza',
+      desc: 'Boletos, planes de pago y recurrencia en un panel.',
+      lead: 'Boletos, planes de pago y cobranza recurrente con baja automática y visión consolidada.',
+      checks: [
+        'Boletos, planes de pago y recurrencia',
+        'Baja automática y reconciliación',
+        'Secuencia de cobranza configurable',
       ],
     },
   },
@@ -362,6 +463,17 @@ export const PRODUCTS: Product[] = [
         'Continuous evolution with no effort from your team',
       ],
     },
+    es: {
+      name: 'White Label',
+      desc: 'Tu marca al frente, nuestra tecnología por detrás.',
+      lead: 'App, internet banking y paneles administrativos personalizados con tu identidad visual, publicados en las tiendas con tu nombre.',
+      checks: [
+        'Personalización completa de app e internet banking',
+        'Publicación en las tiendas con tu marca',
+        'Backoffice para equipos de operación y atención',
+        'Evolución continua sin esfuerzo de tu equipo',
+      ],
+    },
   },
   {
     slug: 'seguranca-e-compliance',
@@ -389,6 +501,17 @@ export const PRODUCTS: Product[] = [
         'Biometrics and geolocation per transaction',
         'Data encryption and key management',
         'Audit trail for every operation',
+      ],
+    },
+    es: {
+      name: 'Seguridad y Compliance',
+      desc: 'Biometría, cifrado y geolocalización.',
+      lead: 'Cada operación pasa por una verificación de identidad y contexto antes de ser liquidada.',
+      checks: [
+        'Infraestructura protegida y monitoreada 24/7',
+        'Biometría y geolocalización por transacción',
+        'Cifrado de datos y gestión de llaves',
+        'Traza de auditoría de cada operación',
       ],
     },
   },
@@ -420,6 +543,17 @@ export const PRODUCTS: Product[] = [
         'Regulatory report generation',
       ],
     },
+    es: {
+      name: 'Antifraude y PLD',
+      desc: 'Scoring en tiempo real, KYC continuo y bloqueo.',
+      lead: 'Monitoreo antifraude en tiempo real y motor de Prevención de Lavado de Dinero en la misma capa.',
+      checks: [
+        'Scoring de riesgo por transacción, en tiempo real',
+        'Bloqueo automático de operaciones sospechosas',
+        'KYC continuo y monitoreo de transacciones atípicas',
+        'Generación de reportes regulatorios',
+      ],
+    },
   },
   {
     slug: 'regulatorio',
@@ -449,6 +583,17 @@ export const PRODUCTS: Product[] = [
         'Filing calendar and an audit trail for every submission',
       ],
     },
+    es: {
+      name: 'Regulatorio',
+      desc: 'CADOCs, COSIF, FGC, e-Financeira y más.',
+      lead: 'Generación y envío de CADOCs al BACEN, integración con FGC, e-Financeira, COSIF, Bloqueo Judicial, SIMBA y BC Correios, cubriendo las obligaciones exigidas por el Banco Central y demás organismos.',
+      checks: [
+        'Generación y envío de CADOCs al BACEN',
+        'Integración con FGC, e-Financeira y COSIF',
+        'Bloqueo Judicial, SIMBA y BC Correios atendidos',
+        'Calendario de envíos y traza de cada remesa',
+      ],
+    },
   },
   {
     slug: 'sandbox',
@@ -474,6 +619,16 @@ export const PRODUCTS: Product[] = [
         'Test keys and fictitious data',
         'The same API as the production environment',
         'No credit card and no commitment',
+      ],
+    },
+    es: {
+      name: 'Sandbox para Pruebas',
+      desc: 'Ambiente gratuito, sin tarjeta de crédito.',
+      lead: 'Ambiente de pruebas gratuito, sin tarjeta de crédito, para integrar y validar la solución con tu equipo técnico.',
+      checks: [
+        'Llaves de prueba y datos ficticios',
+        'La misma API del ambiente de producción',
+        'Sin tarjeta de crédito y sin compromiso',
       ],
     },
   },

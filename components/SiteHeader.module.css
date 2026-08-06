@@ -366,6 +366,23 @@
 
 /* --------------------------------------------------------------- breakpoint */
 
+/* The switch carries three languages, so the bar is tighter than the original
+   two-language layout. Between the mobile breakpoint and ~1120px the spacing
+   gives a little, keeping the CTA on one line instead of overflowing. */
+@media (min-width: 961px) and (max-width: 1120px) {
+  .bar {
+    gap: 16px;
+  }
+
+  .navItem {
+    padding: 10px 10px;
+  }
+
+  .lang {
+    padding: 7px 7px;
+  }
+}
+
 @media (max-width: 960px) {
   .header {
     --h-h: 64px;

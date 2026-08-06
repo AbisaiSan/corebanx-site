@@ -286,5 +286,148 @@ const en: typeof pt = {
   },
 };
 
-export const illustrations = { pt, en };
+const es: typeof pt = {
+  baas: {
+    account: 'Cuenta digital',
+    active: 'activa',
+    ledger: 'LEDGER',
+    ledgerValue: 'D+0',
+    iso: 'ISO 20022',
+    isoValue: '19 msgs',
+  },
+  dashboard: {
+    title: 'Visión general',
+    badge: 'TIEMPO REAL',
+    balanceLabel: 'SALDO CONSOLIDADO',
+    balanceValue: 'R$ 48,2M',
+    reconLabel: 'CONCILIACIÓN',
+    reconValue: '100%',
+    rows: [
+      ['pix · entradas', '12.480'],
+      ['tarjeta · autorizaciones', '3.907'],
+      ['pendientes operativos', '0'],
+    ],
+  },
+  rails: {
+    chips: ['PIX', 'TRANSFERENCIA', 'BOLETO', 'TARJETA', 'QR CODE', 'COMPE', 'RECURRENCIA'],
+    splitTitle: 'SPLIT DE PAGO',
+    splitParts: ['comercio 60%', 'plataforma 30%', 'tarifa 10%'],
+  },
+  cards: {
+    virtual: 'VIRTUAL',
+    number: '•••• •••• •••• 4821',
+    holder: 'titular',
+    kind: 'crédito · débito',
+    activeLabel: 'tarjetas activas',
+    activeValue: '184.320',
+    authLabel: 'autorización promedio',
+    authValue: '38 ms',
+  },
+  investments: {
+    title: 'Inversiones en la cuenta',
+    badge: 'integrado',
+    rows: [
+      ['CDB', '12,4% anual'],
+      ['Tesoro', '10,8% anual'],
+      ['Fondos', 'cartera propia'],
+    ],
+  },
+  agreements: {
+    a: 'Institución A',
+    b: 'Institución B',
+    ruleTitle: 'REGLA DEL CONVENIO',
+    ruleParts: ['traspaso 70%', 'tarifa 20%', 'fondo 10%'],
+    chips: ['conciliación D+0', 'límite por acuerdo'],
+  },
+  billing: {
+    title: 'Cobranzas',
+    badge: 'PANEL ÚNICO',
+    rows: [
+      ['boleto · 8421', 'pagado'],
+      ['plan 12x · 3308', 'abierto'],
+      ['recurrencia · 7712', 'agendada'],
+    ],
+  },
+  security: {
+    title: 'Transacción evaluada',
+    rows: [
+      ['biometría', 'ok'],
+      ['geolocalización', 'ok'],
+      ['score antifraude', '0.98'],
+      ['cifrado', 'AES-256'],
+    ],
+    trail: 'traza de auditoría registrada',
+  },
+  antifraud: {
+    title: 'Fila de análisis',
+    badge: 'tiempo real',
+    rows: [
+      ['tx 9f21 · score 0.12', 'aprobada'],
+      ['tx a3c8 · score 0.61', 'revisión'],
+      ['tx b7d4 · score 0.94', 'bloqueada'],
+    ],
+    chips: ['PLD · KYC continuo', 'reporte regulatorio'],
+  },
+  regulatory: {
+    title: 'Envíos regulatorios',
+    badge: 'AL DÍA',
+    rows: [
+      ['CADOC · BACEN', 'enviado'],
+      ['COSIF · balance', 'conciliado'],
+      ['e-Financeira', 'agendado'],
+      ['FGC', 'integrado'],
+    ],
+    chips: ['Bloqueo Judicial', 'SIMBA', 'BC Correios'],
+  },
+  sandbox: {
+    title: 'Ambiente sandbox',
+    badge: 'GRATUITO',
+    code: [
+      'curl -X POST /sandbox/v1/accounts',
+      '  -H "Authorization: Bearer test_key"',
+      '201 created · env: sandbox',
+    ],
+    chips: ['sin tarjeta de crédito', 'datos ficticios'],
+  },
+  homeHero: {
+    pixLabel: 'PIX RECIBIDO',
+    pixBadge: 'D+0',
+    pixValue: 'R$ 12.480,00',
+    pixMeta: 'cuenta ····8421 · liquidado',
+    cardVirtual: 'VIRTUAL',
+    cardNumber: '•••• 4821',
+    ledgerTitle: 'Ledger · tiempo real',
+    ledgerBadge: 'ONLINE',
+    tpsLabel: 'TPS',
+    tpsValue: '16,7K',
+    latencyLabel: 'Latencia p99',
+    latencyValue: '42 ms',
+    request: 'POST /v1/accounts',
+    response: '201 created · account_id: cbx_8f21',
+  },
+  banksHero: {
+    title: 'Operación del banco',
+    badge: 'EN PRODUCCIÓN',
+    tiles: [
+      ['D+0', 'liquidación el mismo día'],
+      ['API', 'integración sin cambiar el core'],
+      ['7', 'rieles de pago listos'],
+      ['99,99%', 'uptime contratado en SLA'],
+    ],
+  },
+  phone: {
+    time: '9:41',
+    greeting: 'Buenas tardes',
+    balanceLabel: 'SALDO DISPONIBLE',
+    balanceValue: 'R$ 48.240,00',
+    actions: ['Pix', 'Pagar', 'Tarjeta'],
+    rows: [
+      ['Pix recibido', '+ 1.240,00'],
+      ['Tarjeta · débito', '− 89,90'],
+      ['Inversión', '+ 312,45'],
+    ],
+  },
+};
+
+export const illustrations = { pt, en, es };
 export type IllustrationCopy = typeof pt;
