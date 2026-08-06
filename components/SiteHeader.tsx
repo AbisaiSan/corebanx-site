@@ -5,9 +5,10 @@ import { usePathname } from 'next/navigation';
 import { useCallback, useEffect, useState } from 'react';
 
 import { Icon } from './Icons';
+import LangSelect from './LangSelect';
 import s from './SiteHeader.module.css';
 import { common } from '@/lib/copy/common';
-import { href, LANG_LABEL, LANG_TAG, LANGS, PATHS, stripLang, type Lang } from '@/lib/i18n';
+import { href, PATHS, type Lang } from '@/lib/i18n';
 import { getGroup, getProduct, type GroupId } from '@/lib/products';
 
 type Mega = 'produtos' | 'solucoes' | null;
@@ -119,27 +120,6 @@ export default function SiteHeader({ lang }: { lang: Lang }) {
     );
   };
 
-  // The switch keeps the reader on the same page, so it works off the current
-  // path with its locale prefix removed.
-  const langSwitch = () => {
-    const shared = stripLang(pathname);
-    return (
-      <div className={s.langs}>
-        {LANGS.map((code) => (
-          <Link
-            key={code}
-            href={href(code, shared)}
-            className={`${s.lang} ${lang === code ? s.langOn : ''}`}
-            hrefLang={LANG_TAG[code]}
-            aria-current={lang === code ? 'true' : undefined}
-          >
-            {LANG_LABEL[code]}
-          </Link>
-        ))}
-      </div>
-    );
-  };
-
   return (
     <header
       className={`${s.header} ${scrolled ? s.scrolled : ''}`}
@@ -180,11 +160,13 @@ export default function SiteHeader({ lang }: { lang: Lang }) {
           </Link>
         </nav>
 
-        {langSwitch()}
-
         <Link href={to(PATHS.contato)} className={s.cta} onMouseEnter={() => setMega(null)}>
           {c.cta.especialista}
         </Link>
+
+        <div className={s.langSlot} onMouseEnter={() => setMega(null)}>
+          <LangSelect lang={lang} label={c.nav.idioma} />
+        </div>
 
         <button
           type="button"
@@ -263,7 +245,9 @@ export default function SiteHeader({ lang }: { lang: Lang }) {
             {c.cta.especialista}
           </Link>
 
-          <div className={s.overlayLangs}>{langSwitch()}</div>
+          <div className={s.overlayLangs}>
+            <LangSelect lang={lang} label={c.nav.idioma} />
+          </div>
         </div>
       </div>
     </header>

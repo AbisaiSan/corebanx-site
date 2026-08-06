@@ -13,6 +13,7 @@ const pt = {
     openMenu: 'Abrir menu',
     closeMenu: 'Fechar menu',
     skipToContent: 'Ir para o conteúdo',
+    idioma: 'Idioma',
   },
   cta: {
     especialista: 'Fale com um especialista',
@@ -79,6 +80,7 @@ const en: typeof pt = {
     openMenu: 'Open menu',
     closeMenu: 'Close menu',
     skipToContent: 'Skip to content',
+    idioma: 'Language',
   },
   cta: {
     especialista: 'Talk to a specialist',
@@ -140,6 +142,7 @@ const es: typeof pt = {
     openMenu: 'Abrir menú',
     closeMenu: 'Cerrar menú',
     skipToContent: 'Ir al contenido',
+    idioma: 'Idioma',
   },
   cta: {
     especialista: 'Habla con un especialista',

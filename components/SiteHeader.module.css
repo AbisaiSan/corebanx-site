@@ -101,34 +101,11 @@
   color: var(--white);
 }
 
-/* PT/EN switch — the prototype carried this in its preview chrome; on the real
-   site it belongs in the header, built from the same pill vocabulary. */
-.langs {
+/* Slot for the language picker, which sits after the CTA. The control itself
+   lives in LangSelect.module.css. */
+.langSlot {
   flex: none;
   display: flex;
-  gap: 2px;
-  background: var(--grey);
-  padding: 3px;
-  border-radius: 10px;
-}
-
-.lang {
-  font: 600 12px/1 var(--mono);
-  letter-spacing: 0.04em;
-  color: rgba(29, 63, 122, 0.6);
-  text-decoration: none;
-  padding: 7px 9px;
-  border-radius: 8px;
-  transition: background 0.18s, color 0.18s;
-}
-
-.lang:hover {
-  color: var(--navy);
-}
-
-.langOn {
-  background: var(--white);
-  color: var(--navy);
 }
 
 .burger {
@@ -366,23 +343,6 @@
 
 /* --------------------------------------------------------------- breakpoint */
 
-/* The switch carries three languages, so the bar is tighter than the original
-   two-language layout. Between the mobile breakpoint and ~1120px the spacing
-   gives a little, keeping the CTA on one line instead of overflowing. */
-@media (min-width: 961px) and (max-width: 1120px) {
-  .bar {
-    gap: 16px;
-  }
-
-  .navItem {
-    padding: 10px 10px;
-  }
-
-  .lang {
-    padding: 7px 7px;
-  }
-}
-
 @media (max-width: 960px) {
   .header {
     --h-h: 64px;
@@ -390,7 +350,7 @@
 
   .bar .nav,
   .bar .cta,
-  .bar .langs {
+  .bar .langSlot {
     display: none;
   }
 
