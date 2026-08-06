@@ -1,0 +1,531 @@
+/* ==========================================================================
+   Corebanx — design system
+   Palette, typography, buttons, cards and fields extracted from the
+   "Fundamentos visuais Corebanx" screen of the Claude Design prototype.
+   ========================================================================== */
+
+:root {
+  --orange: #f0743a;
+  --orange-hover: #d9612c;
+  --navy: #1d3f7a;
+  --deep: #12274d; /* darker navy used for panels and stat bands */
+  --grey: #ececea;
+  --white: #fff;
+
+  --navy-72: rgba(29, 63, 122, 0.72);
+  --navy-70: rgba(29, 63, 122, 0.7);
+  --navy-65: rgba(29, 63, 122, 0.65);
+  --navy-60: rgba(29, 63, 122, 0.6);
+  --navy-55: rgba(29, 63, 122, 0.55);
+  --navy-line: rgba(29, 63, 122, 0.1);
+
+  --sans: var(--font-dm-sans), system-ui, sans-serif;
+  --display: var(--font-figtree), system-ui, sans-serif;
+  --mono: var(--font-dm-mono), ui-monospace, monospace;
+
+  --wrap: 1180px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  /* Hero compositions tilt cards slightly past their column, exactly as they
+     did inside the prototype's clipped frame. `clip` rather than `hidden` so no
+     scroll container is created and the sticky header keeps working. */
+  overflow-x: clip;
+}
+
+body {
+  background: var(--white);
+  color: var(--navy);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* The prototype laid every screen out inside a fixed-width frame with
+   `container-type: inline-size`, so all of its `cqw` sizing is relative to the
+   page width. Re-establishing the container on the site root keeps every
+   clamp() in this file resolving to exactly the same values as the mockup. */
+.site {
+  container-type: inline-size;
+}
+
+.wrap {
+  max-width: var(--wrap);
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* --------------------------------------------------------------- typography */
+
+.eyebrow {
+  margin: 0;
+  font: 600 12px/1 var(--mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+
+.mono {
+  font-family: var(--mono);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--display);
+  color: var(--navy);
+}
+
+/* ------------------------------------------------------------------ buttons */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  cursor: pointer;
+  font: 600 15px/1 var(--sans);
+  padding: 15px 22px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: background 0.18s, transform 0.18s, border-color 0.18s;
+}
+
+.btn-lg {
+  padding: 16px 24px;
+}
+
+.btn-primary {
+  background: var(--orange);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background: var(--orange-hover);
+  transform: translateY(-1px);
+  color: var(--white);
+}
+
+.btn-secondary {
+  background: var(--white);
+  color: var(--navy);
+  border: 1px solid rgba(29, 63, 122, 0.25);
+}
+
+.btn-secondary:hover {
+  background: var(--grey);
+  border-color: rgba(29, 63, 122, 0.4);
+  color: var(--navy);
+}
+
+/* CTA button sitting on the orange band */
+.btn-onorange {
+  background: var(--white);
+  color: var(--orange);
+  padding: 16px 26px;
+}
+
+.btn-onorange:hover {
+  transform: translateY(-2px);
+  color: var(--orange);
+}
+
+.btn-link {
+  background: transparent;
+  border: 0;
+  padding: 6px 0;
+  cursor: pointer;
+  font: 600 15px/1 var(--sans);
+  color: var(--orange);
+  text-decoration: none;
+}
+
+.btn-link:hover {
+  color: var(--orange-hover);
+}
+
+.btn-disabled {
+  background: rgba(29, 63, 122, 0.12);
+  color: rgba(29, 63, 122, 0.45);
+  cursor: not-allowed;
+}
+
+/* -------------------------------------------------------------------- cards */
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--navy-line);
+  border-radius: 20px;
+  padding: 26px;
+  text-decoration: none;
+  display: block;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 16px 38px rgba(29, 63, 122, 0.14);
+  transform: translateY(-4px);
+}
+
+.card-title {
+  margin: 0;
+  font: 600 19px/1.25 var(--display);
+  color: var(--navy);
+}
+
+.card-title-sm {
+  margin: 0;
+  font: 600 18px/1.25 var(--display);
+  color: var(--navy);
+}
+
+.card-desc {
+  margin: 9px 0 16px;
+  font: 400 14.5px/1.55 var(--sans);
+  color: var(--navy-70);
+}
+
+.card-more {
+  font: 600 14px/1 var(--sans);
+  color: var(--orange);
+}
+
+/* case card — same shape, no white fill, softer lift */
+.card-quiet {
+  border: 1px solid var(--navy-line);
+  border-radius: 20px;
+  padding: 24px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.card-quiet:hover {
+  box-shadow: 0 16px 38px rgba(29, 63, 122, 0.12);
+  transform: translateY(-3px);
+}
+
+/* 48px rounded tile holding a line icon, orange tint */
+.icon-tile {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: rgba(240, 116, 58, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.icon-tile-sm {
+  flex: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 11px;
+  background: rgba(240, 116, 58, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-tile-md {
+  flex: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 11px;
+  background: rgba(240, 116, 58, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-tile-grey {
+  flex: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: var(--grey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------------------------------------------------------------- checklist */
+
+.check {
+  display: flex;
+  gap: 11px;
+  align-items: flex-start;
+}
+
+.check-mark {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--orange);
+  color: var(--white);
+  font: 700 11px/20px var(--sans);
+  text-align: center;
+}
+
+.check-text {
+  font: 400 15.5px/1.5 var(--sans);
+  color: var(--navy);
+}
+
+.check-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* "before" column — flat dash instead of a tick */
+.dash {
+  flex: none;
+  width: 18px;
+  height: 2px;
+  background: rgba(29, 63, 122, 0.3);
+  margin-top: 10px;
+  display: block;
+}
+
+/* ------------------------------------------------------------------- fields */
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.field > span {
+  font: 500 13px/1 var(--sans);
+  color: var(--navy);
+}
+
+.input,
+.select,
+.textarea {
+  font: 400 15px/1 var(--sans);
+  color: var(--navy);
+  padding: 14px 15px;
+  border-radius: 12px;
+  border: 1px solid rgba(29, 63, 122, 0.2);
+  background: var(--white);
+  outline: none;
+  width: 100%;
+}
+
+.textarea {
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  border-color: var(--orange);
+  box-shadow: 0 0 0 3px rgba(240, 116, 58, 0.14);
+}
+
+/* ------------------------------------------------------------- placeholders */
+
+/* striped block standing in for a client / partner logo */
+.logo-ph {
+  height: 56px;
+  border-radius: 12px;
+  background: repeating-linear-gradient(
+    135deg,
+    rgba(29, 63, 122, 0.07) 0 6px,
+    transparent 6px 12px
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 400 10.5px/1 var(--mono);
+  color: rgba(29, 63, 122, 0.5);
+}
+
+/* ------------------------------------------------------- layered hero cards */
+
+/* Two tilted blanks sitting behind the illustrated card, Stripe-style depth.
+   Only the back layers rotate, so the animated front card stays upright. */
+.layer-a,
+.layer-b {
+  position: absolute;
+  border-radius: 20px;
+}
+
+.layer-a {
+  width: 80%;
+  max-width: 360px;
+  height: 72%;
+  background: var(--white);
+  border: 1px solid var(--navy-line);
+  box-shadow: 0 14px 34px rgba(18, 39, 77, 0.1);
+  transform: rotate(-6deg) translate(-22px, -18px);
+}
+
+.layer-b {
+  width: 84%;
+  max-width: 380px;
+  height: 78%;
+  background: var(--grey);
+  transform: rotate(4.5deg) translate(20px, 16px);
+}
+
+.stack {
+  position: relative;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------------------------------------------------------------- animation */
+
+@keyframes cbxFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes cbxRise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes cbxMarquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes cbxSlideOut {
+  0% {
+    transform: translateX(0);
+  }
+  45% {
+    transform: translateX(34px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes cbxGrow {
+  from {
+    transform: scaleY(0.04);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes cbxShine {
+  from {
+    transform: translateX(-120%);
+  }
+  to {
+    transform: translateX(120%);
+  }
+}
+
+.float {
+  animation: cbxFloat 7s ease-in-out infinite;
+}
+
+/* Partner strip: the track holds the logo set twice, so translating it by
+   -50% lands exactly on the duplicate and the loop is seamless. Spacing uses
+   margin-right rather than gap so half the track is one whole cycle. */
+.marquee {
+  overflow: hidden;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: cbxMarquee 38s linear infinite;
+}
+
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+.marquee-item {
+  width: 150px;
+  flex: none;
+  margin-right: 12px;
+}
+
+/* Scroll-triggered animations. AnimatedSection flips `data-inview`, so leaving
+   the viewport removes the animation and coming back re-applies — and restarts
+   — it, which is what makes these replay on every pass rather than once. */
+[data-inview='true'] .anim-slide {
+  animation: cbxSlideOut 1.5s cubic-bezier(0.45, 0, 0.25, 1) both;
+}
+
+.anim-shine {
+  transform: translateX(-120%);
+}
+
+[data-inview='true'] .anim-shine {
+  animation: cbxShine 1.5s cubic-bezier(0.35, 0, 0.3, 1) both;
+}
+
+.anim-grow {
+  transform-origin: bottom;
+}
+
+[data-inview='true'] .anim-grow {
+  animation: cbxGrow 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+/* bars grow in sequence, 90ms apart */
+[data-inview='true'] .anim-grow:nth-child(2) {
+  animation-delay: 0.09s;
+}
+[data-inview='true'] .anim-grow:nth-child(3) {
+  animation-delay: 0.18s;
+}
+[data-inview='true'] .anim-grow:nth-child(4) {
+  animation-delay: 0.27s;
+}
+[data-inview='true'] .anim-grow:nth-child(5) {
+  animation-delay: 0.36s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track,
+  .float,
+  [data-inview='true'] .anim-slide,
+  [data-inview='true'] .anim-shine,
+  [data-inview='true'] .anim-grow,
+  .rise {
+    animation: none !important;
+  }
+
+  .anim-shine {
+    opacity: 0;
+  }
+}

@@ -1,25 +1,103 @@
-# CODING AGENTS: READ THIS FIRST
+# Corebanx — institutional site
 
-This is a **handoff bundle** from Claude Design (claude.ai/design).
+Next.js implementation of the Corebanx site designed in Claude Design. The
+original handoff bundle is still in the repo: the HTML prototypes live in
+`project/`, the design conversation in `chats/`, and the agent-facing handoff
+notes in [`docs/design-handoff.md`](docs/design-handoff.md).
 
-A user mocked up designs in HTML/CSS/JS using an AI design tool, then exported this bundle so a coding agent can implement the designs for real.
+```bash
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # static export of every page
+npm run typecheck
+```
 
-## What you should do — IMPORTANT
+## Pages
 
-**Read the chat transcripts first.** There are 1 chat transcript(s) in `chats/`. The transcripts show the full back-and-forth between the user and the design assistant — they tell you **what the user actually wants** and **where they landed** after iterating. Don't skip them. The final HTML files are the output, but the chat is where the intent lives.
+Portuguese is served from the root and English from `/en`, with the same URL
+structure under both. Every page is statically prerendered.
 
-**Read `project/Corebanx Site.dc.html` in full.** The user had this file open when they triggered the handoff, so it's almost certainly the primary design they want built. Read it top to bottom — don't skim. Then **follow its imports**: open every file it pulls in (shared components, CSS, scripts) so you understand how the pieces fit together before you start implementing.
+| Page | PT | EN |
+| --- | --- | --- |
+| Home | `/` | `/en` |
+| Produtos e Soluções (index) | `/produtos` | `/en/produtos` |
+| Product detail (×12) | `/produtos/[slug]` | `/en/produtos/[slug]` |
+| Para Bancos | `/solucoes/para-bancos` | `/en/solucoes/para-bancos` |
+| Quem Somos | `/quem-somos` | `/en/quem-somos` |
+| Cases e Parceiros | `/cases` | `/en/cases` |
+| Contato | `/contato` | `/en/contato` |
 
-**If anything is ambiguous, ask the user to confirm before you start implementing.** It's much cheaper to clarify scope up front than to build the wrong thing.
+The twelve product pages are `baas-core-bancario`, `dashboard-de-gestao`,
+`trilhos-de-pagamento`, `integracao-de-cartoes`, `investimentos`, `convenios`,
+`cobranca`, `white-label`, `seguranca-e-compliance`, `antifraude-e-pld`,
+`regulatorio` and `sandbox`.
 
-## About the design files
+## Structure
 
-The design medium is **HTML/CSS/JS** — these are prototypes, not production code. Your job is to **recreate them pixel-perfectly** in whatever technology makes sense for the target codebase (React, Vue, native, whatever fits). Match the visual output; don't copy the prototype's internal structure unless it happens to fit.
+```
+app/(pt)/…          Portuguese routes + root layout (html lang="pt-BR")
+app/(en)/en/…       English routes + root layout (html lang="en")
+app/globals.css     Design system: palette, type, buttons, cards, fields, keyframes
+components/         SiteHeader, SiteFooter, illustrations, page components
+lib/copy/           PT/EN copy, one file per area
+lib/products.ts     The five product groups and twelve products
+```
 
-**Don't render these files in a browser or take screenshots unless the user asks you to.** Everything you need — dimensions, colors, layout rules — is spelled out in the source. Read the HTML and CSS directly; a screenshot won't tell you anything they don't.
+Route files are three lines each; the page bodies are shared components under
+`components/pages/` that take a `lang` prop.
 
-## Bundle contents
+## Design fidelity
 
-- `README.md` — this file
-- `chats/` — conversation transcripts (read these!)
-- `project/` — the `Corebanx site design project` project files (HTML prototypes, assets, components)
+The prototype laid every screen out inside a fixed-width frame carrying
+`container-type: inline-size`, so all of its sizing is written in `cqw` units.
+The site re-establishes that container on the page root (`.site` in
+`globals.css`), which means every `clamp()` copied from the design resolves to
+exactly the same value it did in the mockup — a 1280px-wide viewport renders
+the desktop frame pixel for pixel, and 390px renders the mobile frame.
+
+Colours, type scale, radii, shadows and spacing come from the prototype's
+"Fundamentos visuais Corebanx" screen and are collected as tokens and component
+classes in `globals.css`.
+
+### Animations
+
+All four scroll-driven behaviours from the design are preserved:
+
+- **Partner strip** — continuous right-to-left marquee, paused on hover. The
+  logo set is rendered twice and the track translates by exactly `-50%`, so one
+  cycle is 972px and the loop has no seam.
+- **Stat band** — each number counts up from zero over ~1.25s, all together.
+- **BaaS card / Dashboard bars / Card shine + counters** — grouped per section
+  by `AnimatedSection`, so everything inside a block fires at the same instant,
+  and re-fires each time the block scrolls back into view rather than only once.
+
+`prefers-reduced-motion: reduce` disables all of them.
+
+## Decisions and open items
+
+- **Prototype chrome dropped.** The dark preview bar (screen switcher,
+  Desktop/Mobile frames, Protótipo/Revisão, PT/EN) was scaffolding for the
+  mockup. Device switching is now real breakpoints; the PT/EN switch moved into
+  the header, built from the same pill vocabulary as the rest of the design.
+- **Mini design system screen dropped** as a page — it now exists as the token
+  and component layer in `globals.css`.
+- **Segment pages.** Only "Para Bancos" was designed. As in the prototype, the
+  three other segment entries in the mega menu and footer point at it. They need
+  their own pages once the copy exists.
+- **Contact form has no backend.** It validates in the browser and confirms
+  receipt; point `ContactPage`'s `onSubmit` at a real endpoint when there is one.
+- **Placeholders kept, as designed:** partner and client logos, the testimonial
+  photo and quote, the four case cards, certification seals, the phone number
+  and street address. "Trabalhe conosco", "Central de privacidade", the legal
+  links, the social links and "Agendar uma conversa" have no destinations yet.
+- **Favicon** at `app/icon.svg` is a neutral orange placeholder — swap it for
+  the real brand favicon.
+- Two small inconsistencies in the prototype were normalised rather than
+  copied: the Dashboard and Trilhos icons were swapped in the desktop mega menu
+  relative to everywhere else, and a few menu items carried a shorter
+  description on mobile than on desktop. Each product now has one icon and one
+  description used everywhere.
+- English copy comes from the prototype's own EN dictionary where it existed;
+  strings the design never translated (product card lines, illustration labels,
+  page metadata) were translated to match its tone and are worth a review by a
+  native speaker before launch.
